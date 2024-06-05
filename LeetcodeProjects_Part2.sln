@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_41_FirstMissingPositive", "project_41_FirstMissingPositive\project_41_FirstMissingPositive.csproj", "{2C64F053-ABE6-484C-9824-54D81166FF04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_41_FirstMissingPositive_2", "project_41_FirstMissingPositive_2\project_41_FirstMissingPositive_2.csproj", "{02A7FBE3-6A45-48BD-B605-23EFF5065C1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_42_TrappingRainWater", "project_42_TrappingRainWater\project_42_TrappingRainWater.csproj", "{CCE9CEE8-E9C4-43ED-8675-8C4CE7287EE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2C64F053-ABE6-484C-9824-54D81166FF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C64F053-ABE6-484C-9824-54D81166FF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C64F053-ABE6-484C-9824-54D81166FF04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A7FBE3-6A45-48BD-B605-23EFF5065C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A7FBE3-6A45-48BD-B605-23EFF5065C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A7FBE3-6A45-48BD-B605-23EFF5065C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A7FBE3-6A45-48BD-B605-23EFF5065C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCE9CEE8-E9C4-43ED-8675-8C4CE7287EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCE9CEE8-E9C4-43ED-8675-8C4CE7287EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCE9CEE8-E9C4-43ED-8675-8C4CE7287EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCE9CEE8-E9C4-43ED-8675-8C4CE7287EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
