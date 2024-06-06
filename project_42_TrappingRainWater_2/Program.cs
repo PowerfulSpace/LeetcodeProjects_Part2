@@ -7,6 +7,7 @@ int[] height3 = { 5, 1, 2, 0, 11, 9, 1, 1, 3, 3, 5, 6, 3, 2, 1, 5, 5, 1, 1, 1, 5
 int[] height4 = { 2, 0, 2 };
 int[] height5 = { 0, 1, 2, 0, 3, 0, 1, 2, 0, 0, 4, 2, 1, 2, 5, 0, 1, 2, 0, 2 };
 int[] height6 = { 5, 4, 1, 2 };
+int[] height7 = { 9, 6, 8, 8, 5, 6, 3 };
 
 
 Console.WriteLine(Trap(height1));
@@ -15,6 +16,7 @@ Console.WriteLine(Trap(height3));
 Console.WriteLine(Trap(height4));
 Console.WriteLine(Trap(height5));
 Console.WriteLine(Trap(height6));
+Console.WriteLine(Trap(height7));
 
 Console.ReadLine();
 
@@ -64,10 +66,13 @@ int FindingHeights(int[] height,int indexTail, int sum,int indexHead)
 
         while (i != indexHead)
         {
-            if(tail > height[i])
+            if(tail < height[i])
             {
-                sum += tail - height[i];
+                tail = height[i];
             }
+
+            sum += tail - height[i];
+
             i--;
         }
 
