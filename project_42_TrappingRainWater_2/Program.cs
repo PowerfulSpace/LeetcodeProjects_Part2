@@ -3,32 +3,77 @@
 
 int[] height1 = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
 int[] height2 = { 4, 2, 0, 3, 2, 5 };
-int[] height3 = { 10527, 740, 9013, 1300, 29680, 4898, 13993, 15213, 18182, 24254, 3966, 24378, 11522, 9190, 6389, 32067 };
+int[] height3 = { 5, 1, 2, 0, 11, 9, 1, 1, 3, 3, 5, 6, 3, 2, 1, 5, 5, 1, 1, 1, 5, 0, 1, 3, 8, 6, 4 };
+int[] height4 = { 2, 0, 2 };
+int[] height5 = { 0, 1, 2, 0, 3, 0, 1, 2, 0, 0, 4, 2, 1, 2, 5, 0, 1, 2, 0, 2 };
+int[] height6 = { 5, 4, 1, 2 };
 
 
 Console.WriteLine(Trap(height1));
 Console.WriteLine(Trap(height2));
 Console.WriteLine(Trap(height3));
+Console.WriteLine(Trap(height4));
+Console.WriteLine(Trap(height5));
+Console.WriteLine(Trap(height6));
 
 Console.ReadLine();
 
-
+int head;
+int tail;
 int Trap(int[] height)
 {
-    return 1;
+    head = height[0];
+    tail = height[height.Length - 1];
+    if (height.Length == 0) {  return 0; }
+
+    int result = FindingHeights(height, 0, 0,0);
+    return result;
 }
 
-void FindingHeights(int[] height,int sum,int max)
+int FindingHeights(int[] height,int indexTail, int sum,int indexHead)
 {
 
-	for (int i = 0; i < height.Length; i++)
-	{
-		if (i != 0 && height[i] > max)
-		{
-			sum = max - height[i];
-            max = height[i];
-        }
-	}
+    if(indexTail == height.Length) { return sum; }
 
+    if (height[indexTail] >= head && indexHead != indexTail)
+    {
+        int i = indexTail - 1;
+
+        while (indexHead != indexTail)
+        {
+            sum += head - height[i] ;
+            i--;
+            indexHead++;
+        }
+
+        head = height[indexTail];
+        indexHead = indexTail;
+    }
+
+    sum = FindingHeights(height, indexTail + 1, sum, indexHead);
+
+    if(indexTail > 0 && tail < height[indexTail - 1])
+    {
+        tail = height[indexTail - 1];
+        return sum;
+    }
+
+    if (head > tail)
+    {
+        int i = indexTail - 1;
+
+        while (i != indexHead)
+        {
+            if(tail > height[i])
+            {
+                sum += tail - height[i];
+            }
+            i--;
+        }
+
+        head = tail;
+    }
+
+    return sum;
 }
 
