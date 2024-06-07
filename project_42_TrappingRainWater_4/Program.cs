@@ -10,13 +10,13 @@ int[] height6 = { 5, 4, 1, 2 };
 int[] height7 = { 9, 6, 8, 8, 5, 6, 3 };
 
 
-//Console.WriteLine(Trap(height1));
-//Console.WriteLine(Trap(height2));
+Console.WriteLine(Trap(height1));
+Console.WriteLine(Trap(height2));
 Console.WriteLine(Trap(height3));
-//Console.WriteLine(Trap(height4));
-//Console.WriteLine(Trap(height5));
-//Console.WriteLine(Trap(height6));
-//Console.WriteLine(Trap(height7));
+Console.WriteLine(Trap(height4));
+Console.WriteLine(Trap(height5));
+Console.WriteLine(Trap(height6));
+Console.WriteLine(Trap(height7));
 
 Console.ReadLine();
 
