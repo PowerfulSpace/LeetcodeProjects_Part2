@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_43_Multiply Strings
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_43_Multiply Strings_4", "project_43_Multiply Strings_4\project_43_Multiply Strings_4.csproj", "{74F30AD2-44E6-4255-B2DA-CBB9619236E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_44_WildcardMatching", "project_44_WildcardMatching\project_44_WildcardMatching.csproj", "{F8274673-7C72-4E1E-88B0-1E33FE16BAF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{74F30AD2-44E6-4255-B2DA-CBB9619236E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74F30AD2-44E6-4255-B2DA-CBB9619236E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74F30AD2-44E6-4255-B2DA-CBB9619236E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8274673-7C72-4E1E-88B0-1E33FE16BAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8274673-7C72-4E1E-88B0-1E33FE16BAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8274673-7C72-4E1E-88B0-1E33FE16BAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8274673-7C72-4E1E-88B0-1E33FE16BAF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
