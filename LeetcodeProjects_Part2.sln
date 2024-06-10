@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_42_TrappingRainWate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_43_Multiply Strings_2", "project_43_Multiply Strings_2\project_43_Multiply Strings_2.csproj", "{917EEFA8-6D90-454C-B9AD-947226B8F59D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_43_Multiply Strings_3", "project_43_Multiply Strings_3\project_43_Multiply Strings_3.csproj", "{F405C5B2-163F-4CAE-888D-CBEF46CCFEFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_43_Multiply Strings_3", "project_43_Multiply Strings_3\project_43_Multiply Strings_3.csproj", "{F405C5B2-163F-4CAE-888D-CBEF46CCFEFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_43_Multiply Strings_4", "project_43_Multiply Strings_4\project_43_Multiply Strings_4.csproj", "{74F30AD2-44E6-4255-B2DA-CBB9619236E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{F405C5B2-163F-4CAE-888D-CBEF46CCFEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F405C5B2-163F-4CAE-888D-CBEF46CCFEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F405C5B2-163F-4CAE-888D-CBEF46CCFEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F30AD2-44E6-4255-B2DA-CBB9619236E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F30AD2-44E6-4255-B2DA-CBB9619236E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F30AD2-44E6-4255-B2DA-CBB9619236E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F30AD2-44E6-4255-B2DA-CBB9619236E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
