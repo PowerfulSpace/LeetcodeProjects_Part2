@@ -13,44 +13,72 @@ string p3 = "?a";
 string s4 = "acdcb";
 string p4 = "a*c?b";
 
+string s5 = "adceb";
+string p5 = "*a*b";
+
+string s6 = "";
+string p6 = "*****";
+
+string s7 = "a";
+string p7 = "aa";
+
+string s8 = "abcabczzzde";
+string p8 = "*abc???de*";
+
+string s9 = "aab";
+string p9 = "c*a*b";
+
 //Console.WriteLine(IsMatch(s1, p1));
 //Console.WriteLine(IsMatch(s2, p2));
 //Console.WriteLine(IsMatch(s3, p3));
-Console.WriteLine(IsMatch(s4, p4));
+//Console.WriteLine(IsMatch(s4, p4));
+//Console.WriteLine(IsMatch(s5, p5));
+//Console.WriteLine(IsMatch(s6, p6));
+//Console.WriteLine(IsMatch(s7, p7));
+//Console.WriteLine(IsMatch(s8, p8));
+Console.WriteLine(IsMatch(s9, p9));
 
 Console.ReadLine();
 
 bool IsMatch(string s, string p)
 {
-    StringBuilder pattern = new StringBuilder(p);
+
+    if (s.Length < p.Length && !p.Contains('*')) { return false; }
+
+    StringBuilder str = new StringBuilder(s);
+    char item = '\0';
 
     for (int i = 0; i < p.Length; i++)
     {
-        if (pattern[i] == '?')
+        if (p[i] == '*')
         {
-            pattern[i] = s[i];
-        }
-        if (pattern[i] == '*')
-        {
-            var item = s[i];
-            pattern[i] = item;
-            i++;
 
-            while (i < s.Length && s[i] == item)
+            if (i + 1 < p.Length)
             {
-                pattern.Insert(i, item);
+                item = p[i + 1];
+                if(item == '*') { break; }
+            }
+
+            while (str.Length != 0 && str[0] != item)
+            {
                 i++;
-            }        
+                str.Remove(0, 1);
+            }
+            if(str.Length > 0)
+            {
+                i++;
+                str.Remove(0, 1);
+            }
+        }
+        else if(p[i] == '?' || str[0] == p[i])
+        {
+            //i++;
+            str.Remove(0, 1);
         }
     }
 
-    if (s == pattern.ToString())
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    if(str.Length > 0) { return false; }
 
+
+    return true;
 }
