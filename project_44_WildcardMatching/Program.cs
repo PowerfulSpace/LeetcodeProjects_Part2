@@ -1,6 +1,5 @@
 ﻿
 using System.Text;
-using System.Text.RegularExpressions;
 
 string s1 = "aa";
 string p1 = "a";
@@ -11,56 +10,47 @@ string p2 = "*";
 string s3 = "cb";
 string p3 = "?a";
 
-Console.WriteLine(IsMatch(s1, p1));
-Console.WriteLine(IsMatch(s2, p2));
-Console.WriteLine(IsMatch(s3, p3));
+string s4 = "acdcb";
+string p4 = "a*c?b";
+
+//Console.WriteLine(IsMatch(s1, p1));
+//Console.WriteLine(IsMatch(s2, p2));
+//Console.WriteLine(IsMatch(s3, p3));
+Console.WriteLine(IsMatch(s4, p4));
 
 Console.ReadLine();
 
 bool IsMatch(string s, string p)
 {
-    //* - Соответствует любому символу, любой последовательности
-    //? - соответствует 1 любому символу
+    StringBuilder pattern = new StringBuilder(p);
 
-    StringBuilder pattern = new StringBuilder();
-
-    if (p.Contains('*') || p.Contains('?'))
+    for (int i = 0; i < p.Length; i++)
     {
-        switch (p)
+        if (pattern[i] == '?')
         {
-            case "*":
-                pattern.Clear();
-                pattern.Append(@".\*");
-                break;
-            default:
-                pattern.Append(p);
-                break;
+            pattern[i] = s[i];
         }
+        if (pattern[i] == '*')
+        {
+            var item = s[i];
+            pattern[i] = item;
+            i++;
 
-        if (p.Contains("?"))
-        {
-            int index = p.IndexOf("?");
-            pattern[index] = '.';
+            while (i < s.Length && s[i] == item)
+            {
+                pattern.Insert(i, item);
+                i++;
+            }        
         }
+    }
+
+    if (s == pattern.ToString())
+    {
+        return true;
     }
     else
     {
-        if(s.Length != p.Length) { return false; }
-
-        for (int i = 0; i < s.Length; i++)
-        {
-            if (s[i] != p[i])
-            {
-                return false;
-            }
-        }
-        return true;
+        return false;
     }
-   
-  
 
-
-    var result = Regex.IsMatch(s, pattern.ToString());
-
-    return result;
 }
