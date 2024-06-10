@@ -16,9 +16,9 @@ string numD2 = "4";
 
 
 
-//Console.WriteLine(Multiply(numA1, numA2));
-//Console.WriteLine(Multiply(numB1, numB2));
-//Console.WriteLine(Multiply(numC1, numC2));
+Console.WriteLine(Multiply(numA1, numA2));
+Console.WriteLine(Multiply(numB1, numB2));
+Console.WriteLine(Multiply(numC1, numC2));
 Console.WriteLine(Multiply(numD1, numD2));
 
 Console.ReadLine();
