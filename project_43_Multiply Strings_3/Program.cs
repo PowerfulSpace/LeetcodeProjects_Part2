@@ -16,8 +16,8 @@ string numD2 = "4";
 
 
 
-Console.WriteLine(Multiply(numA1, numA2));
-Console.WriteLine(Multiply(numB1, numB2));
+//Console.WriteLine(Multiply(numA1, numA2));
+//Console.WriteLine(Multiply(numB1, numB2));
 Console.WriteLine(Multiply(numC1, numC2));
 Console.WriteLine(Multiply(numD1, numD2));
 
@@ -25,37 +25,53 @@ Console.ReadLine();
 
 string Multiply(string num1, string num2)
 {
-    if (num1 == "0" || num2 == "0")
-        return "0";
+    if (num1 == "0" || num2 == "0") return "0";
 
-    int m = num1.Length, n = num2.Length;
-    //the length of the result of multiplying two numbers can never exceed the sum of the length of both numbers
+    //this should be a string
+    //then you use index in string to then do math
+    //this will reduce memory usage
+    var number = new List<int>();
 
-    int[] result = new int[m + n];
-    for (int i = m - 1; i >= 0; i--)
+    for (int i = num1.Length - 1; i >= 0; i--)
     {
-        for (int j = n - 1; j >= 0; j--)
-        {
-            int mul = (num1[i] - '0') * (num2[j] - '0');
-            int sum = mul + result[i + j + 1];
+        int n1 = Convert.ToInt32(num1.Substring(i, 1));
+        int n1Position = num1.Length - 1 - i;
 
-            result[i + j + 1] = sum % 10;//hold the last digit
-            result[i + j] += sum / 10; //add what you have in the preceeding index to the integer divisiio
+        for (int j = num2.Length - 1; j >= 0; j--)
+        {
+            int n2 = Convert.ToInt32(num2.Substring(j, 1));
+            int n2Position = num2.Length - 1 - j;
+
+            int product = n1 * n2;
+            int position = n1Position + n2Position;
+
+            while (number.Count - 1 < position)
+            {
+                number.Add(0);
+            }
+
+            number[position] += product;
+
+            while (number[position] >= 10)
+            {
+                number[position] -= 10;
+
+                if (number.Count <= position + 1)
+                {
+                    number.Add(0);
+                }
+
+                number[position + 1]++;
+            }
         }
     }
 
-    //with stringbuilder you can append values of several data types
+    string output = string.Empty;
 
-
-    StringBuilder sb = new StringBuilder();
-    foreach (int num in result)
+    for (int i = number.Count - 1; i >= 0; i--)
     {
-        if (!(sb.Length == 0 && num == 0))
-        {
-            sb.Append(num);
-        }
-
+        output += number[i].ToString();
     }
 
-    return sb.Length == 0 ? "0" : sb.ToString();
+    return output;
 }
