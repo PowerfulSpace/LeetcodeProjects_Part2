@@ -34,8 +34,8 @@ string p9 = "c*a*b";
 //Console.WriteLine(IsMatch(s4, p4));
 //Console.WriteLine(IsMatch(s5, p5));
 //Console.WriteLine(IsMatch(s6, p6));
-//Console.WriteLine(IsMatch(s7, p7));
-//Console.WriteLine(IsMatch(s8, p8));
+Console.WriteLine(IsMatch(s7, p7));
+Console.WriteLine(IsMatch(s8, p8));
 Console.WriteLine(IsMatch(s9, p9));
 
 Console.ReadLine();
@@ -46,7 +46,7 @@ Console.ReadLine();
 bool IsMatch(string s, string p)
 {
 
-    if (s.Length < p.Length && !p.Contains('*')) { return false; }
+    if(p.Length > 0 && p[0] == '*') {  return true; };
 
     StringBuilder str = new StringBuilder(s);
     char item = '\0';
@@ -73,12 +73,17 @@ bool IsMatch(string s, string p)
                 str.Remove(0, 1);
             }
         }
-        else if(p[i] == '?' || str[0] == p[i])
+        else if(str.Length != 0 && (p[i] == '?' || str[0] == p[i]))
         {
-            //i++;
             str.Remove(0, 1);
         }
+        else
+        {
+            if (str.Length == 0 && i < p.Length) { return false; }
 
+            if (p[i] != '*' && p[i] != '?' && p[i] != str[0]) { return false; }
+
+        }
     }
 
     if(str.Length > 0) { return false; }
