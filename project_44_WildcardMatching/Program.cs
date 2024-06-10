@@ -40,6 +40,9 @@ Console.WriteLine(IsMatch(s9, p9));
 
 Console.ReadLine();
 
+
+//Решить вопрос, длины паттерна и длины строки
+
 bool IsMatch(string s, string p)
 {
 
@@ -75,6 +78,7 @@ bool IsMatch(string s, string p)
             //i++;
             str.Remove(0, 1);
         }
+
     }
 
     if(str.Length > 0) { return false; }
