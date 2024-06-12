@@ -59,13 +59,14 @@ void Examination(List<char> s, string p, int indexS, int indexP)
 {
     if (indexS >= s.Count || indexP >= p.Length) { return; }
 
+
     if (p[indexP] == s[indexS] || p[indexP] == '?')
     {
         Examination(s, p, indexS + 1, indexP + 1);
         s[indexS] = '-';
     }
     else if (p[indexP] == '*')
-    {      
+    {
         if (indexP < p.Length && p[indexP + 1] == s[indexS])
         {
             indexP+=2;
