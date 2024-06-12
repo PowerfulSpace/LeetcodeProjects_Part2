@@ -32,16 +32,22 @@ string p9 = "c*a*b";
 string s10 = "abefcdgiescdfimde";
 string p10 = "ab*cd?i*de";
 
+string s11 = "abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaa" +
+    "bbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbaba" +
+    "aaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabb";
+string p11 = "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa*a********ba*bbb***a*ba*bb*bb**a*b*bb";
+
 //Console.WriteLine(IsMatch(s1, p1));
 //Console.WriteLine(IsMatch(s2, p2));
 //Console.WriteLine(IsMatch(s3, p3));
 //Console.WriteLine(IsMatch(s4, p4));
 //Console.WriteLine(IsMatch(s5, p5));
-Console.WriteLine(IsMatch(s6, p6));
+//Console.WriteLine(IsMatch(s6, p6));
 //Console.WriteLine(IsMatch(s7, p7));
 //Console.WriteLine(IsMatch(s8, p8));
 //Console.WriteLine(IsMatch(s9, p9));
 //Console.WriteLine(IsMatch(s10, p10));
+Console.WriteLine(IsMatch(s11, p11));
 
 Console.ReadLine();
 
@@ -58,18 +64,19 @@ bool IsMatch(string s, string p)
         {
             pattern.Remove(i, 1);
             pattern.Insert(i, star);
-            i += 6;
+            i += 5;
             continue;
         }
         if(pattern[i] == '?')
         {
             pattern.Remove(i, 1);
             pattern.Insert(i, question);
-            i += 4;
+            i += 3;
             continue;
         }
     }
-
+    pattern.Insert(0, '^');
+    pattern.Append('$');
 
     Regex regex = new Regex(pattern.ToString());
 
