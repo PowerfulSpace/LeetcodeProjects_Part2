@@ -32,15 +32,15 @@ string p9 = "c*a*b";
 string s10 = "abefcdgiescdfimde";
 string p10 = "ab*cd?i*de";
 
-//Console.WriteLine(IsMatch(s1, p1));
-//Console.WriteLine(IsMatch(s2, p2));
-//Console.WriteLine(IsMatch(s3, p3));
-//Console.WriteLine(IsMatch(s4, p4));
-//Console.WriteLine(IsMatch(s5, p5));
-//Console.WriteLine(IsMatch(s6, p6));
-//Console.WriteLine(IsMatch(s7, p7));
-//Console.WriteLine(IsMatch(s8, p8));
-//Console.WriteLine(IsMatch(s9, p9));
+Console.WriteLine(IsMatch(s1, p1));
+Console.WriteLine(IsMatch(s2, p2));
+Console.WriteLine(IsMatch(s3, p3));
+Console.WriteLine(IsMatch(s4, p4));
+Console.WriteLine(IsMatch(s5, p5));
+Console.WriteLine(IsMatch(s6, p6));
+Console.WriteLine(IsMatch(s7, p7));
+Console.WriteLine(IsMatch(s8, p8));
+Console.WriteLine(IsMatch(s9, p9));
 Console.WriteLine(IsMatch(s10, p10));
 
 Console.ReadLine();
