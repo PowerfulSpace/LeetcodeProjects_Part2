@@ -1,4 +1,7 @@
 ﻿
+using System.Text.RegularExpressions;
+using System.Text;
+
 string s1 = "aa";
 string p1 = "a";
 
@@ -44,35 +47,34 @@ Console.ReadLine();
 
 bool IsMatch(string s, string p)
 {
-    List<char> chars = new List<char>(s);
+    string question = @".{1}";
+    string star = @"[^*?]*";
 
-    Examination(chars, p, 0,0);
+    StringBuilder pattern = new StringBuilder(p);
 
-    chars.RemoveAll(x => x == '-');
+    for (int i = 0; i < pattern.Length; i++)
+    {
+        if (pattern[i] == '*')
+        {
+            pattern.Remove(i, 1);
+            pattern.Insert(i, star);
+            i += 5;
+            continue;
+        }
+        if (pattern[i] == '?')
+        {
+            pattern.Remove(i, 1);
+            pattern.Insert(i, question);
+            i += 3;
+            continue;
+        }
+    }
+    pattern.Insert(0, '^');
+    pattern.Append('$');
 
-    bool result = chars.Count == 0 ? true : false;
+    Regex regex = new Regex(pattern.ToString());
+
+    bool result = regex.IsMatch(s);
 
     return result;
-}
-
-void Examination(List<char> s, string p, int indexS, int indexP)
-{
-    if (indexS >= s.Count || indexP >= p.Length) { return; }
-
-
-    if (p[indexP] == s[indexS] || p[indexP] == '?')
-    {
-        Examination(s, p, indexS + 1, indexP + 1);
-        s[indexS] = '-';
-    }
-    else if (p[indexP] == '*')
-    {
-        if (indexP < p.Length && p[indexP + 1] == s[indexS])
-        {
-            indexP+=2;
-        }
-        Examination(s, p, indexS+1, indexP);
-        s[indexS] = '-';
-    }
-
 }

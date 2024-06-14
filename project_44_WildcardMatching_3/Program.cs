@@ -53,34 +53,43 @@ Console.ReadLine();
 
 bool IsMatch(string s, string p)
 {
-    string question = @".{1}";
-    string star = @"[^*?]*";
+    if (p == "*") return true;
 
-    StringBuilder pattern = new StringBuilder(p);
+    int sLocation = 0;
+    int pLocation = 0;
 
-    for (int i = 0; i < pattern.Length; i++)
+    int pStar = -1;
+    int lastMatch = -1;
+
+
+    while (sLocation < s.Length)
     {
-        if (pattern[i] == '*')
+        char sChar = s[sLocation];
+
+        if (pLocation < p.Length && (p[pLocation] == '?' || sChar == p[pLocation]))
         {
-            pattern.Remove(i, 1);
-            pattern.Insert(i, star);
-            i += 5;
-            continue;
+            sLocation++;
+            pLocation++;
         }
-        if(pattern[i] == '?')
+        else if (pLocation < p.Length && p[pLocation] == '*')
         {
-            pattern.Remove(i, 1);
-            pattern.Insert(i, question);
-            i += 3;
-            continue;
+            pStar = pLocation;
+            lastMatch = sLocation;
+            pLocation++;
+        }
+        else if (pStar == -1)
+        {
+            return false;
+        }
+        else
+        {
+            pLocation = pStar + 1;
+            sLocation = lastMatch + 1;
+            lastMatch = sLocation;
         }
     }
-    pattern.Insert(0, '^');
-    pattern.Append('$');
 
-    Regex regex = new Regex(pattern.ToString());
+    while (pLocation < p.Length && p[pLocation] == '*') pLocation++;
 
-    bool result = regex.IsMatch(s);
-
-    return result;
+    return pLocation == p.Length;
 }

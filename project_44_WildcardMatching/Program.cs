@@ -50,63 +50,35 @@ Console.ReadLine();
 
 bool IsMatch(string s, string p)
 {
+    List<char> chars = new List<char>(s);
 
-    if(p.Length > 0 && p[0] == '*') {  return true; };
+    Examination(chars, p, 0, 0);
 
-    StringBuilder str = new StringBuilder(s);
-    char item = '\0';
-    bool greed = false; ;
+    chars.RemoveAll(x => x == '-');
 
-    for (int i = 0; i < p.Length; i++)
+    bool result = chars.Count == 0 ? true : false;
+
+    return result;
+}
+
+void Examination(List<char> s, string p, int indexS, int indexP)
+{
+    if (indexS >= s.Count || indexP >= p.Length) { return; }
+
+
+    if (p[indexP] == s[indexS] || p[indexP] == '?')
     {
-        greed = false;
-        if (p[i] == '*')
+        Examination(s, p, indexS + 1, indexP + 1);
+        s[indexS] = '-';
+    }
+    else if (p[indexP] == '*')
+    {
+        if (indexP < p.Length && p[indexP + 1] == s[indexS])
         {
-            if (i + 1 < p.Length)
-            {
-                item = p[i + 1];
-                if (item == '*') { break; }
-            }
-
-            while (str.Length != 0 && str[0] != item)
-            {
-                str.Remove(0, 1);
-            }
-            if (str.Length > 0)
-            {
-                i++;
-                str.Remove(0, 1);
-            }
-
-            //int count = 0;
-            //while(count < str.Length)
-            //{
-            //    if (str[count] == '?') { break; }
-            //    if (str[count] == item)
-            //    {
-            //        greed = true;
-            //    }
-            //}
-            //if (greed)
-            //{
-            //    str.Remove(0, count);
-            //}
-
+            indexP += 2;
         }
-        else if(str.Length != 0 && (p[i] == '?' || str[0] == p[i]))
-        {
-            str.Remove(0, 1);
-        }
-        else
-        {
-            if (str.Length == 0 && i < p.Length) { return false; }
-
-            if (p[i] != '*' && p[i] != '?' && p[i] != str[0]) { return false; }
-        }
+        Examination(s, p, indexS + 1, indexP);
+        s[indexS] = '-';
     }
 
-    if(str.Length > 0) { return false; }
-
-
-    return true;
 }
