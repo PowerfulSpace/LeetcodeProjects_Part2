@@ -42,7 +42,7 @@ string p11 = "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa
 //Console.WriteLine(IsMatch(s3, p3));
 //Console.WriteLine(IsMatch(s4, p4));
 //Console.WriteLine(IsMatch(s5, p5));
-//Console.WriteLine(IsMatch(s6, p6));
+Console.WriteLine(IsMatch(s6, p6));
 //Console.WriteLine(IsMatch(s7, p7));
 //Console.WriteLine(IsMatch(s8, p8));
 //Console.WriteLine(IsMatch(s9, p9));
