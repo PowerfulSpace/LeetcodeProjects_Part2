@@ -24,48 +24,33 @@ int Jump(int[] nums)
 {
 	if(nums.Length <= 1) return 0;
 
+	int countStep = 0;
 	int maxStep = nums[0];
 	int step = nums[0];
 	int index = 0;
-	int count = 0;
 
-	for(int i = 0; i < nums.Length; i++)
+	for (int i = 1; i < nums.Length; i++)
 	{
-		if(maxStep >= nums.Length - 1)
+		if (i < maxStep)
 		{
-			count++;
-			break;
-		}
-		if (i < maxStep )
-		{
-			if (nums[i] + step > step)
+			if (nums[i] + maxStep > step)
 			{
-				step = nums[i];
+				step = nums[i] + maxStep;
 				index = i;
             }
 		}
 		else if(i == maxStep)
 		{
-			//Нужно написать проверку
-            if(maxStep < step + nums[index])
-			{
-				maxStep = step + index;
-                i = index;
-            }
-			else
-			{
-				maxStep = nums[i] + maxStep;
-
-            }
-			if (nums[i] == 0) { break; }
-
-			if(i < nums.Length)
-			{
-                count++;
-            }
+			i = index;
+			maxStep = step;
+			countStep++;
         }
+	}
+	if(step > nums.Length)
+	{
+        countStep++;
     }
 
-    return count; 
+    return countStep; 
 }
 
