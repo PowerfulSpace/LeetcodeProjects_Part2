@@ -46,6 +46,7 @@ int Jump(int[] nums)
 		}
 		else if(i == maxStep)
 		{
+			//Нужно написать проверку
             if(maxStep < step + nums[index])
 			{
 				maxStep = step + index;
