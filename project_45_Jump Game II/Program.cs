@@ -22,35 +22,38 @@ Console.ReadLine();
 
 int Jump(int[] nums)
 {
-	if(nums.Length <= 1) return 0;
+    if (nums.Length <= 1 || nums[0] == 0) return 0;
 
-	int countStep = 0;
-	int maxStep = nums[0];
-	int step = nums[0];
-	int index = 0;
+    int steps = 1;
+    int currentIndex = 0;
+    int lastIndex = nums.Length - 1;
 
-	for (int i = 1; i < nums.Length; i++)
-	{
-		if (i < maxStep)
-		{
-			if (nums[i] + maxStep > step)
-			{
-				step = nums[i] + maxStep;
-				index = i;
+    while (currentIndex < lastIndex)
+    {
+        int currentNum = nums[currentIndex];
+
+        if (currentIndex + currentNum >= lastIndex) return steps;
+
+        int nextIndex = -1;
+        int nextMaxJump = 0;
+
+        for (int i = 1; i <= currentNum; i++)
+        {
+            int jump = nums[currentIndex + i];
+
+            if (jump + i > nextMaxJump)
+            {
+                nextIndex = currentIndex + i;
+                nextMaxJump = nums[currentIndex + i] + i;
             }
-		}
-		else if(i == maxStep)
-		{
-			i = index;
-			maxStep = step;
-			countStep++;
         }
-	}
-	if(step > nums.Length)
-	{
-        countStep++;
+
+        if (nextIndex == -1) return 0;
+
+        steps++;
+        currentIndex = nextIndex;
     }
 
-    return countStep; 
+    return steps;
 }
 
