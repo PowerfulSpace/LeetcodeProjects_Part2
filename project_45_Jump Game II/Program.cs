@@ -7,6 +7,7 @@ int[] nums4 = { 1, 1, 1, 1 };
 int[] nums5 = { 2,1 };
 int[] nums6 = { 1, 2, 1, 1, 1 };
 int[] nums7 = { 4, 1, 1, 3, 1, 1, 1 };
+int[] nums8 = { 1, 0, 0, 0, 0, 5 };
 
 
 Console.WriteLine(Jump(nums1));
@@ -16,6 +17,7 @@ Console.WriteLine(Jump(nums4));
 Console.WriteLine(Jump(nums5));
 Console.WriteLine(Jump(nums6));
 Console.WriteLine(Jump(nums7));
+Console.WriteLine(Jump(nums8));
 
 Console.ReadLine();
 

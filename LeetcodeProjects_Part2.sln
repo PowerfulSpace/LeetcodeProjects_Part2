@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_45_Jump Game II_2",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_45_Jump Game II_3", "project_45_Jump Game II_3\project_45_Jump Game II_3.csproj", "{EA46DF11-559F-46F5-8385-B510E82BD31B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_45_Jump Game II_4", "project_45_Jump Game II_4\project_45_Jump Game II_4.csproj", "{0BC68EDC-286E-4E8D-9B79-26E305BE299C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{EA46DF11-559F-46F5-8385-B510E82BD31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA46DF11-559F-46F5-8385-B510E82BD31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA46DF11-559F-46F5-8385-B510E82BD31B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BC68EDC-286E-4E8D-9B79-26E305BE299C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC68EDC-286E-4E8D-9B79-26E305BE299C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC68EDC-286E-4E8D-9B79-26E305BE299C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC68EDC-286E-4E8D-9B79-26E305BE299C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
