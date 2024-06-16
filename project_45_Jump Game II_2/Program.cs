@@ -17,13 +17,13 @@ int[] nums11 = { 1,0,0,0,0,5 };
 //Console.WriteLine(Jump(nums1));
 //Console.WriteLine(Jump(nums2));
 //Console.WriteLine(Jump(nums3));
-//Console.WriteLine(Jump(nums4));
-//Console.WriteLine(Jump(nums5));
-//Console.WriteLine(Jump(nums6));
-//Console.WriteLine(Jump(nums7));
-//Console.WriteLine(Jump(nums8));
-//Console.WriteLine(Jump(nums9));
-//Console.WriteLine(Jump(nums10));
+Console.WriteLine(Jump(nums4));
+Console.WriteLine(Jump(nums5));
+Console.WriteLine(Jump(nums6));
+Console.WriteLine(Jump(nums7));
+Console.WriteLine(Jump(nums8));
+Console.WriteLine(Jump(nums9));
+Console.WriteLine(Jump(nums10));
 Console.WriteLine(Jump(nums11));
 
 Console.ReadLine();
@@ -31,39 +31,23 @@ Console.ReadLine();
 
 int Jump(int[] nums)
 {
-    if (nums.Length <= 1 || nums[0] == 0) { return 0; }
-
-    int step = 1;
-
-    int currentIndex = 0;
+    int step = 0;
+    int index = 0;
     int lastIndex = nums.Length - 1;
 
-
-    while (currentIndex < lastIndex)
+    while (index < lastIndex)
     {
-        int currentNum = nums[currentIndex];
-
-        if(currentNum + currentIndex >= lastIndex) { return step; }
-
-        int maxJump = 0;
-        int nextIndex = -1;
-
-        for (int i = 1; i <= currentNum; i++)
+        if (index + nums[index] >= lastIndex)
         {
-            if (nums[currentIndex + i] + i >= maxJump)
-            {
-                maxJump = nums[currentIndex + i] + i;
-                nextIndex = currentIndex + i;
-            }
+            step++;
+            lastIndex = index;
+            index = 0;
         }
-
-        if (nextIndex == -1) { return 0; }
-
-        step++;
-        currentIndex = nextIndex;
+        else
+        {
+            index++;
+        }
     }
-
-
     return step;
 }
 
