@@ -8,7 +8,7 @@ int[] nums4 = { 1, 2, 3, 4};
 
 //Permute(nums1);
 //Permute(nums2);
-//Permute(nums3);
+Permute(nums3);
 Permute(nums4);
 
 Console.ReadLine();
