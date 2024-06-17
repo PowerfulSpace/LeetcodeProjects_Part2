@@ -13,14 +13,34 @@ Permute(nums4);
 
 Console.ReadLine();
 
-
+List<IList<int>> result;
 IList<IList<int>> Permute(int[] nums)
 {
+    result = new List<IList<int>>();
 
-    List<IList<int>> result = new List<IList<int>>();
-
+    Permutations(nums.ToList(), new List<int>());
 
     return result;
 }
 
+void Permutations(List<int> nums, List<int> combination)
+{
 
+    if(nums.Count == 1)
+    {
+        combination.Add(nums[0]);
+        result.Add(combination);
+        return;
+    }
+
+    for (int i = 0; i < nums.Count; i++)
+    {
+        List<int> comb = new List<int>(combination);
+        List<int> clone = new List<int>(nums);
+
+        comb.Add(clone[i]);
+        clone.RemoveAt(i);
+
+        Permutations(clone, comb);
+    }
+}

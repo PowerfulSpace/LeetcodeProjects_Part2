@@ -6,42 +6,29 @@ int[] nums3 = { 1 };
 int[] nums4 = { 1, 2, 3, 4 };
 
 
-//Permute(nums1);
-//Permute(nums2);
-//Permute(nums3);
+Permute(nums1);
+Permute(nums2);
+Permute(nums3);
 Permute(nums4);
 
 Console.ReadLine();
 
-List<IList<int>> output;
-
 IList<IList<int>> Permute(int[] nums)
 {
 
-    output = new List<IList<int>>();
+    var output = new List<IList<int>>();
+    if (nums.Length == 1)
+    {
+        output.Add(new List<int> { nums[0] });
+        return output;
+    }
 
-    Permutations(nums.ToList(), new List<int>());
+    for (var i = 0; i < nums.Length; i++)
+    {
+        var num = nums[i];
+        var perms = Permute(nums.Where(n => n != num).ToArray());
+        output.AddRange(perms.Select(p => new List<int> { num }.Concat(p).ToList()));
+    }
 
     return output;
-}
-
-void Permutations(List<int> nums, List<int> currentPermutation)
-{
-    if (nums.Count == 1)
-    {
-        currentPermutation.Add(nums[0]);
-        output.Add(currentPermutation);
-        return;
-    }
-
-    for (int i = 0; i < nums.Count; i++)
-    {
-        List<int> copyPermutation = new List<int>(currentPermutation);
-        List<int> copyNums = new List<int>(nums);
-
-        copyPermutation.Add(nums[i]);
-        copyNums.RemoveAt(i);
-
-        Permutations(copyNums, copyPermutation);
-    }
 }
