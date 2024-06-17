@@ -19,8 +19,6 @@ Console.ReadLine();
 
 IList<IList<int>> Permute(int[] nums)
 {
-    //Разбить по частям (101 мл сек вроде бы)
-
     var output = new List<IList<int>>();
     if (nums.Length == 1)
     {
