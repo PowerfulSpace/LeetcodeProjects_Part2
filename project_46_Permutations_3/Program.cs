@@ -5,11 +5,6 @@ int[] nums2 = { 0, 1 };
 int[] nums3 = { 1 };
 int[] nums4 = { 1, 2, 3, 4 };
 
-IList<IList<int>> perms = new List<IList<int>>() { new List<int> { 1, 2, 3 }, new List<int> { 2, 3, 4 } };
-
-var a = perms.Select(x => new List<int>() { 11}.Concat(x));
-Console.WriteLine();
-
 Print(Permute(nums1));
 Print(Permute(nums2));
 Print(Permute(nums3));
