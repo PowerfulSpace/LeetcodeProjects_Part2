@@ -15,4 +15,8 @@ Console.ReadLine();
 IList<IList<int>> Permute(int[] nums)
 {
 
+    List<IList<int>> result = new List<IList<int>>();
+
+
+    return result;
 }
