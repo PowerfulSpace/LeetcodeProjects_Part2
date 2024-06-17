@@ -44,3 +44,17 @@ void Permutations(List<int> nums, List<int> combination)
         Permutations(clone, comb);
     }
 }
+
+void Print(IList<IList<int>> lists)
+{
+    Console.WriteLine();
+    Console.WriteLine();
+    foreach (var list in lists)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            Console.Write(list[i]);
+        }
+        Console.WriteLine();
+    }
+}
