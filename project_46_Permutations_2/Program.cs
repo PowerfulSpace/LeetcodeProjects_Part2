@@ -6,10 +6,10 @@ int[] nums3 = { 1 };
 int[] nums4 = { 1, 2, 3, 4 };
 
 
-Permute(nums1);
-Permute(nums2);
-Permute(nums3);
-Permute(nums4);
+Print(Permute(nums1));
+Print(Permute(nums2));
+Print(Permute(nums3));
+Print(Permute(nums4));
 
 Console.ReadLine();
 
@@ -31,4 +31,19 @@ IList<IList<int>> Permute(int[] nums)
     }
 
     return output;
+}
+
+
+void Print(IList<IList<int>> lists)
+{
+    Console.WriteLine();
+    Console.WriteLine();
+    foreach (var list in lists)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            Console.Write(list[i]);
+        }
+        Console.WriteLine();
+    }
 }
