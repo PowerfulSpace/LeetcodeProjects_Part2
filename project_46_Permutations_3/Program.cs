@@ -14,27 +14,31 @@ Console.ReadLine();
 
 IList<IList<int>> Permute(int[] nums)
 {
-    var output = new List<IList<int>>();
-    if (nums.Length == 1)
+    List<IList<int>> result = new List<IList<int>>();
+    Queue<List<int>> permutations = new Queue<List<int>>();
+    permutations.Enqueue(new List<int>());
+    foreach (int num in nums)
     {
-        output.Add(new List<int> { nums[0] });
-        return output;
+        int n = permutations.Count;
+        for (int i = 0; i < n; i++)
+        {
+            List<int> oldPermutation = permutations.Dequeue();
+            for (int j = 0; j <= oldPermutation.Count; j++)
+            {
+                List<int> newPermutation = new List<int>(oldPermutation);
+                newPermutation.Insert(j, num);
+                if (newPermutation.Count == nums.Length)
+                {
+                    result.Add(newPermutation);
+                }
+                else
+                {
+                    permutations.Enqueue(newPermutation);
+                }
+            }
+        }
     }
-
-    for (var i = 0; i < nums.Length; i++)
-    {
-        int num = nums[i];
-
-        int[] specificNums = nums.Where(n => n != num).ToArray();
-
-        IList<IList<int>> perms = Permute(specificNums);
-
-        IEnumerable<IList<int>> addingNum = perms.Select(p => new List<int> { num }.Concat(p).ToList());
-
-        output.AddRange(addingNum);
-    }
-
-    return output;
+    return result;
 }
 
 
