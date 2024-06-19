@@ -21,7 +21,6 @@ Console.ReadLine();
 
 void Rotate(int[][] matrix)
 {
-    //if(matrix == null || matrix.Length < 1 || matrix.GetLength(1) <= 1) { return; }
 
     int[][] array = GetCoppy(matrix);
 
