@@ -55,13 +55,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_47_Permutations II"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_47_Permutations II_2", "project_47_Permutations II_2\project_47_Permutations II_2.csproj", "{BF5E76E2-A18D-41E7-B23C-80AB685863DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_47_Permutations II_3", "project_47_Permutations II_3\project_47_Permutations II_3.csproj", "{2462BBD4-DDEF-44B5-A933-0CEAF28720EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_47_Permutations II_3", "project_47_Permutations II_3\project_47_Permutations II_3.csproj", "{2462BBD4-DDEF-44B5-A933-0CEAF28720EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_47_Permutations II_4", "project_47_Permutations II_4\project_47_Permutations II_4.csproj", "{DEA0EF16-B10E-4DF7-BABC-2424ADD04E86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_47_Permutations II_4", "project_47_Permutations II_4\project_47_Permutations II_4.csproj", "{DEA0EF16-B10E-4DF7-BABC-2424ADD04E86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_47_Permutations II_5", "project_47_Permutations II_5\project_47_Permutations II_5.csproj", "{57225877-7D1F-4EC5-B2A4-2CF9D4DD3EF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_47_Permutations II_5", "project_47_Permutations II_5\project_47_Permutations II_5.csproj", "{57225877-7D1F-4EC5-B2A4-2CF9D4DD3EF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_48_Rotate Image", "project_48_Rotate Image\project_48_Rotate Image.csproj", "{2D3D07AE-CA4C-4340-99BD-F4ABC42B7DBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image", "project_48_Rotate Image\project_48_Rotate Image.csproj", "{2D3D07AE-CA4C-4340-99BD-F4ABC42B7DBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_48_Rotate Image_2", "project_48_Rotate Image_2\project_48_Rotate Image_2.csproj", "{9B11A02A-E1B5-4730-B567-E71703995E4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,10 @@ Global
 		{2D3D07AE-CA4C-4340-99BD-F4ABC42B7DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D3D07AE-CA4C-4340-99BD-F4ABC42B7DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D3D07AE-CA4C-4340-99BD-F4ABC42B7DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B11A02A-E1B5-4730-B567-E71703995E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B11A02A-E1B5-4730-B567-E71703995E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B11A02A-E1B5-4730-B567-E71703995E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B11A02A-E1B5-4730-B567-E71703995E4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
