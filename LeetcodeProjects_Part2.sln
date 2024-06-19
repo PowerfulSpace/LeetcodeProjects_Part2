@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_46_Permutations_6",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_46_Permutations_7", "project_46_Permutations_7\project_46_Permutations_7.csproj", "{B242D637-4280-49DC-906B-F4B200B3AEA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_47_Permutations II", "project_47_Permutations II\project_47_Permutations II.csproj", "{E836705D-DF80-4B01-A845-FC1E06FB0C0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_47_Permutations II", "project_47_Permutations II\project_47_Permutations II.csproj", "{E836705D-DF80-4B01-A845-FC1E06FB0C0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_47_Permutations II_2", "project_47_Permutations II_2\project_47_Permutations II_2.csproj", "{BF5E76E2-A18D-41E7-B23C-80AB685863DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{E836705D-DF80-4B01-A845-FC1E06FB0C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E836705D-DF80-4B01-A845-FC1E06FB0C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E836705D-DF80-4B01-A845-FC1E06FB0C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF5E76E2-A18D-41E7-B23C-80AB685863DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5E76E2-A18D-41E7-B23C-80AB685863DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5E76E2-A18D-41E7-B23C-80AB685863DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5E76E2-A18D-41E7-B23C-80AB685863DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
