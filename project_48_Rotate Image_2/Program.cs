@@ -21,5 +21,5 @@ Console.ReadLine();
 
 void Rotate(int[][] matrix)
 {
-
+    //Реализовать код, без слонирования массивов
 }
