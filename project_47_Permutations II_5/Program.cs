@@ -32,6 +32,7 @@ void Permutations(int[] nums, Dictionary<int, int> dict, List<int> lt, List<ILis
     if (lt.Count == nums.Length)
     {
         result.Add(new List<int>(lt));
+        return;
     }
     foreach (var key in dict.Keys)
     {
