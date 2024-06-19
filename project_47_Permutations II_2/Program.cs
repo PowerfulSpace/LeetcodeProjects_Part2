@@ -30,7 +30,7 @@ void Permutations(List<int> nums, List<int> currentPermutation, IList<IList<int>
         return;
     }
 
-    int previousNum = -11;
+    int previousNum = -1;
 
     for (int i = 0; i < nums.Count; i++)
     {
