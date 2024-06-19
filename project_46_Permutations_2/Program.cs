@@ -1,36 +1,50 @@
 ﻿
 
-int[] nums1 = { 1, 2, 3, };
-int[] nums2 = { 0, 1 };
-int[] nums3 = { 1 };
-int[] nums4 = { 1, 2, 3, 4 };
+int[] nums1 = { 1, 1, 2 };
+int[] nums2 = { 1, 2, 3 };
+int[] nums3 = { 3, 3, 1, 2, 3, 2, 3, 1 };
 
 
-Print(Permute(nums1));
-Print(Permute(nums2));
-Print(Permute(nums3));
-Print(Permute(nums4));
+Print(PermuteUnique(nums1));
+Print(PermuteUnique(nums2));
+//Print(PermuteUnique(nums3));
 
 Console.ReadLine();
 
-IList<IList<int>> Permute(int[] nums)
+
+IList<IList<int>> PermuteUnique(int[] nums)
 {
+    IList<IList<int>> result = new List<IList<int>>();
+    Array.Sort(nums);
+    Permutations(nums.ToList(), new List<int>(), result);
 
-    var output = new List<IList<int>>();
-    if (nums.Length == 1)
+    return result;
+}
+
+void Permutations(List<int> nums, List<int> comb, IList<IList<int>> result)
+{
+    if (nums.Count == 0)
     {
-        output.Add(new List<int> { nums[0] });
-        return output;
+        result.Add(new List<int>(comb));
+
+        return;
     }
 
-    for (var i = 0; i < nums.Length; i++)
+    for (int i = 0; i < nums.Count; i++)
     {
-        var num = nums[i];
-        var perms = Permute(nums.Where(n => n != num).ToArray());
-        output.AddRange(perms.Select(p => new List<int> { num }.Concat(p).ToList()));
-    }
+        List<int> clone = new List<int>(nums);
+        List<int> combination = new List<int>(comb);
 
-    return output;
+        while (i < nums.Count - 1 && clone[i] == clone[i + 1])
+        {
+            i++;
+        }
+
+        combination.Add(clone[i]);
+        clone.RemoveAt(i);
+
+        Permutations(clone, combination, result);
+    }
 }
 
 

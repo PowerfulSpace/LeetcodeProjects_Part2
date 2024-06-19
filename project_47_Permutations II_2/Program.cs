@@ -1,5 +1,4 @@
 ﻿
-using System.Linq;
 
 int[] nums1 = { 1, 1, 2 };
 int[] nums2 = { 1, 2, 3 };
@@ -22,32 +21,34 @@ IList<IList<int>> PermuteUnique(int[] nums)
     return result;
 }
 
-void Permutations(List<int> nums, List<int> comb, IList<IList<int>> result)
+void Permutations(List<int> nums, List<int> currentPermutation, IList<IList<int>> result)
 {
-    if (nums.Count == 0)
+    if (nums.Count == 1)
     {
-        result.Add(new List<int>(comb));
-
+        currentPermutation.Add(nums[0]);
+        result.Add(currentPermutation);
         return;
     }
 
+    int previousNum = -11;
+
     for (int i = 0; i < nums.Count; i++)
     {
-        List<int> clone = new List<int>(nums);
-        List<int> combination = new List<int>(comb);
-
-        while(i < nums.Count - 1 && clone[i] == clone[i + 1])
+        while (i < nums.Count && nums[i] == previousNum)
         {
             i++;
         }
 
-        combination.Add(clone[i]);
-        clone.RemoveAt(i);
+        if (i >= nums.Count) return;
 
-        Permutations(clone, combination, result);
+        previousNum = nums[i];
+        List<int> copyPermutation = new List<int>(currentPermutation);
+        List<int> copyNums = new List<int>(nums);
 
-        combination.RemoveAt(combination.Count - 1);
+        copyPermutation.Add(nums[i]);
+        copyNums.RemoveAt(i);
 
+        Permutations(copyNums, copyPermutation, result);
     }
 }
 
