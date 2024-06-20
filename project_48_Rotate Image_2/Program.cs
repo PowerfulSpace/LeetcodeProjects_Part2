@@ -1,10 +1,14 @@
 ﻿
+
+
 int[][] nums1 = new int[][]
 {
     new int[3]{ 1,2,3},
     new int[3]{ 4,5,6},
     new int[3]{ 7,8,9}
 };
+
+
 
 int[][] nums2 = new int[][]
 {
@@ -15,20 +19,19 @@ Rotate(nums1);
 //Rotate(nums2);
 
 
-
 Console.ReadLine();
 
 //Добавить миетод на отображение
 void Rotate(int[][] matrix)
 {
     int n = matrix.Length;
-    for (int i = 0; i < n; i++)
+    for (int row = 0; row < n; row++)
     {
-        for (int j = i + 1; j < n; j++)
+        for (int col = row + 1; col < n; col++)
         {
-            int temp = matrix[i][j];
-            matrix[i][j] = matrix[j][i];
-            matrix[j][i] = temp;
+            int temp = matrix[row][col];
+            matrix[row][col] = matrix[col][row];
+            matrix[col][row] = temp;
         }
     }
     for (int i = 0; i < n; i++)
