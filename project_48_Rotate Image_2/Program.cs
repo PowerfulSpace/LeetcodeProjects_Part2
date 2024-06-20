@@ -12,7 +12,7 @@ int[][] nums2 = new int[][]
 };
 
 Rotate(nums1);
-Rotate(nums2);
+//Rotate(nums2);
 
 
 
@@ -21,5 +21,18 @@ Console.ReadLine();
 
 void Rotate(int[][] matrix)
 {
-    //Реализовать код, без слонирования массивов
+    int n = matrix.Length;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        Array.Reverse(matrix[i]);
+    }
 }
