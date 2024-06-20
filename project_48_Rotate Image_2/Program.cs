@@ -18,7 +18,7 @@ Rotate(nums1);
 
 Console.ReadLine();
 
-
+//Добавить миетод на отображение
 void Rotate(int[][] matrix)
 {
     int n = matrix.Length;
