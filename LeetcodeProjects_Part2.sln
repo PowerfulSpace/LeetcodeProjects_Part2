@@ -67,6 +67,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image_2",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_48_Rotate Image_3", "project_48_Rotate Image_3\project_48_Rotate Image_3.csproj", "{7950430E-992E-4ACC-AA19-50471026ECA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_48_Rotate Image_4", "project_48_Rotate Image_4\project_48_Rotate Image_4.csproj", "{028082D0-1A2B-423F-B921-7A3D210E7A21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,10 @@ Global
 		{7950430E-992E-4ACC-AA19-50471026ECA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7950430E-992E-4ACC-AA19-50471026ECA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7950430E-992E-4ACC-AA19-50471026ECA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028082D0-1A2B-423F-B921-7A3D210E7A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028082D0-1A2B-423F-B921-7A3D210E7A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028082D0-1A2B-423F-B921-7A3D210E7A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028082D0-1A2B-423F-B921-7A3D210E7A21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
