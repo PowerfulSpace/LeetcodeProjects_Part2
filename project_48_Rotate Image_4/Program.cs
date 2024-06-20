@@ -12,7 +12,7 @@ int[][] nums2 = new int[][]
 };
 
 Rotate(nums1);
-//Rotate(nums2);
+Rotate(nums2);
 
 
 
