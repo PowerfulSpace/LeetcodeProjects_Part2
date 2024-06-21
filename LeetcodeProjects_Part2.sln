@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_49_Group Anagrams_2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_49_Group Anagrams_3", "project_49_Group Anagrams_3\project_49_Group Anagrams_3.csproj", "{9EF306C7-E0FA-4559-A88E-16EA829D6065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_50_Pow(x,n)", "project_50_Pow(x,n)\project_50_Pow(x,n).csproj", "{E12B46D1-CC9E-4659-948C-09DD1378AF36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +227,10 @@ Global
 		{9EF306C7-E0FA-4559-A88E-16EA829D6065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EF306C7-E0FA-4559-A88E-16EA829D6065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EF306C7-E0FA-4559-A88E-16EA829D6065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12B46D1-CC9E-4659-948C-09DD1378AF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12B46D1-CC9E-4659-948C-09DD1378AF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12B46D1-CC9E-4659-948C-09DD1378AF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12B46D1-CC9E-4659-948C-09DD1378AF36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
