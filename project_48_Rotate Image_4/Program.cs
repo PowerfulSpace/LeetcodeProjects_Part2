@@ -33,7 +33,9 @@ void Rotate(int[][] matrix)
         {
             int forward = j + layerStart;
             int backwards = layerEnd - j;
+
             int start = matrix[layerStart][forward];
+
             matrix[layerStart][forward] = matrix[backwards][layerStart];
             matrix[backwards][layerStart] = matrix[layerEnd][backwards];
             matrix[layerEnd][backwards] = matrix[forward][layerEnd];
