@@ -65,9 +65,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image_2", "project_48_Rotate Image_2\project_48_Rotate Image_2.csproj", "{9B11A02A-E1B5-4730-B567-E71703995E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_48_Rotate Image_3", "project_48_Rotate Image_3\project_48_Rotate Image_3.csproj", "{7950430E-992E-4ACC-AA19-50471026ECA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image_3", "project_48_Rotate Image_3\project_48_Rotate Image_3.csproj", "{7950430E-992E-4ACC-AA19-50471026ECA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_48_Rotate Image_4", "project_48_Rotate Image_4\project_48_Rotate Image_4.csproj", "{028082D0-1A2B-423F-B921-7A3D210E7A21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image_4", "project_48_Rotate Image_4\project_48_Rotate Image_4.csproj", "{028082D0-1A2B-423F-B921-7A3D210E7A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_49_Group Anagrams", "project_49_Group Anagrams\project_49_Group Anagrams.csproj", "{8928528F-EAC5-4DD7-95BD-E28352998894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_49_Group Anagrams_2", "project_49_Group Anagrams_2\project_49_Group Anagrams_2.csproj", "{DF95CBA2-E111-4D4D-99FC-047AA8869F23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +211,14 @@ Global
 		{028082D0-1A2B-423F-B921-7A3D210E7A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{028082D0-1A2B-423F-B921-7A3D210E7A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{028082D0-1A2B-423F-B921-7A3D210E7A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8928528F-EAC5-4DD7-95BD-E28352998894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8928528F-EAC5-4DD7-95BD-E28352998894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8928528F-EAC5-4DD7-95BD-E28352998894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8928528F-EAC5-4DD7-95BD-E28352998894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF95CBA2-E111-4D4D-99FC-047AA8869F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF95CBA2-E111-4D4D-99FC-047AA8869F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF95CBA2-E111-4D4D-99FC-047AA8869F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF95CBA2-E111-4D4D-99FC-047AA8869F23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
