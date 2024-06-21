@@ -16,36 +16,17 @@ Console.ReadLine();
 
 IList<IList<string>> GroupAnagrams(string[] strs)
 {
-    if (strs == null || strs.Length == 0) return new List<IList<string>>();
-    var countDict = new Dictionary<string, IList<string>>();
-    foreach (string str in strs)
+    Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
+    foreach (string s in strs)
     {
-        var charList = new char[26];
-        foreach (char c in str)
+        char[] charArray = s.ToCharArray();
+        Array.Sort(charArray);
+        string sortedString = new string(charArray);
+        if (!dict.ContainsKey(sortedString))
         {
-            charList[c - 'a']++;
+            dict[sortedString] = new List<string>();
         }
-
-        // Increase the count as per char
-        // foreach (char c in str) count[c - 'a']++;
-        StringBuilder sb = new StringBuilder("");
-        for (int i = 0; i < 26; i++)
-        {
-            sb.Append('#');
-            sb.Append(charList[i]);
-        }
-
-        string key = sb.ToString();
-
-        if (!countDict.ContainsKey(key))
-        {
-            countDict.Add(key, new List<string> { str });
-        }
-        else
-        {
-            countDict[key].Add(str);
-        }
+        dict[sortedString].Add(s);
     }
-
-    return countDict.Values.ToList();
+    return new List<IList<string>>(dict.Values);
 }
