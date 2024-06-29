@@ -9,6 +9,9 @@ IList<IList<string>> SolveNQueens(int n)
 {
     var result = new List<IList<string>>();
 
+
+
+
     return result;
 }
 
