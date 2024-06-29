@@ -69,15 +69,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image_3",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_48_Rotate Image_4", "project_48_Rotate Image_4\project_48_Rotate Image_4.csproj", "{028082D0-1A2B-423F-B921-7A3D210E7A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_49_Group Anagrams", "project_49_Group Anagrams\project_49_Group Anagrams.csproj", "{8928528F-EAC5-4DD7-95BD-E28352998894}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_49_Group Anagrams", "project_49_Group Anagrams\project_49_Group Anagrams.csproj", "{8928528F-EAC5-4DD7-95BD-E28352998894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_49_Group Anagrams_2", "project_49_Group Anagrams_2\project_49_Group Anagrams_2.csproj", "{DF95CBA2-E111-4D4D-99FC-047AA8869F23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_49_Group Anagrams_2", "project_49_Group Anagrams_2\project_49_Group Anagrams_2.csproj", "{DF95CBA2-E111-4D4D-99FC-047AA8869F23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_49_Group Anagrams_3", "project_49_Group Anagrams_3\project_49_Group Anagrams_3.csproj", "{9EF306C7-E0FA-4559-A88E-16EA829D6065}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_49_Group Anagrams_3", "project_49_Group Anagrams_3\project_49_Group Anagrams_3.csproj", "{9EF306C7-E0FA-4559-A88E-16EA829D6065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_50_Pow(x,n)", "project_50_Pow(x,n)\project_50_Pow(x,n).csproj", "{E12B46D1-CC9E-4659-948C-09DD1378AF36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_50_Pow(x,n)", "project_50_Pow(x,n)\project_50_Pow(x,n).csproj", "{E12B46D1-CC9E-4659-948C-09DD1378AF36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_51_N-Queens", "project_51_N-Queens\project_51_N-Queens.csproj", "{BC2D49E3-5DD9-4DEC-A1E9-ABDD39EF4751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_51_N-Queens", "project_51_N-Queens\project_51_N-Queens.csproj", "{BC2D49E3-5DD9-4DEC-A1E9-ABDD39EF4751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_52_N-Queens II", "project_52_N-Queens II\project_52_N-Queens II.csproj", "{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +239,10 @@ Global
 		{BC2D49E3-5DD9-4DEC-A1E9-ABDD39EF4751}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC2D49E3-5DD9-4DEC-A1E9-ABDD39EF4751}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC2D49E3-5DD9-4DEC-A1E9-ABDD39EF4751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
