@@ -12,6 +12,4 @@ double MyPow(double x, int n)
 {
     return Math.Pow(x, n);
 }
-
-
 //Добавить доп вариант для реализации
