@@ -1,5 +1,5 @@
 ﻿
-int n1 = 4;
+int n1 = 9;
 
 SolveNQueens(n1);
 
@@ -61,5 +61,6 @@ IList<IList<string>> SolveNQueens(int n)
 
 void AccommodationQueens(char[,] CheasBoard, int y, int x)
 {
-
+    //Добавить рекурсивный метод, для откатывания назад вигур.
+    //Откатанная фигура, должна будет сместиться на следующий свободный лемент в право
 }
