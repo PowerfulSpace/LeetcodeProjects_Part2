@@ -29,28 +29,23 @@ IList<IList<string>> SolveNQueens(int n)
     return result;
 }
 
-bool AccommodationQueens(char[,] CheasBoard, int y, int x, int left, int rigth, int countQueens)
+void AccommodationQueens(char[,] cheasBoard, int y, int x, int left, int rigth, int countQueens)
 {
-    if(y > CheasBoard.GetLength(0) || x > CheasBoard.GetLength(0))
-    {
-        return true;
-    }
+    if(y > cheasBoard.GetLength(0) || x > cheasBoard.GetLength(0)) { return; }
+    if (countQueens == cheasBoard.GetLength(0)) { return; }
 
-    if (countQueens == CheasBoard.GetLength(0))
-    {
-        return true;
-    }
     bool isAdd = false;
 
-    if (y < CheasBoard.GetLength(1))
-    {
-        for (int j = 0; j < CheasBoard.GetLength(0); j++)
-        {
-            if (CheasBoard[y, j] == '.') { continue; };
 
-            if (CheasBoard[y, j] != '.' && CheasBoard[y, j] != 'Q')
+    if (y < cheasBoard.GetLength(1))
+    {
+        for (int j = x; j < cheasBoard.GetLength(0); j++)
+        {
+            if (cheasBoard[y, j] == '.') { continue; };
+
+            if (cheasBoard[y, j] != '.' && cheasBoard[y, j] != 'Q')
             {
-                CheasBoard[y, j] = 'Q';
+                cheasBoard[y, j] = 'Q';
                 isAdd = true;
                 x = j;
 
@@ -58,26 +53,42 @@ bool AccommodationQueens(char[,] CheasBoard, int y, int x, int left, int rigth, 
             }
         }
 
-        if (isAdd == false) { return false; }
-
-        left = x - y;
-        rigth = x + y;
-
-        LokingCells(CheasBoard, y, x, left, rigth);
-
-        Print(CheasBoard);
-
-
-        bool result = AccommodationQueens(CheasBoard, y + 1, x, left, rigth, countQueens);
-
-        if (result == false)
+        if (isAdd)
         {
-            CheasBoard[y, x] = '\0';
-            AccommodationQueens(CheasBoard, y, x + 1, left, rigth, countQueens);
+            left = x - y;
+            rigth = x + y;
+
+            LokingCells(cheasBoard, y, x, left, rigth);
+
+            Print(cheasBoard);
+
+
+            AccommodationQueens(cheasBoard, y + 1, 0, left, rigth, countQueens);
         }
+        else
+        {
+            for (int i = 0; i < cheasBoard.GetLength(0); i++)
+            {
+                if(cheasBoard[y - 1, i] == 'Q')
+                {
+                    cheasBoard[y - 1, i] = '.';
+                    break;
+                }
+            }
+            
+            return;
+        }
+
+        if (cheasBoard[y, x] == '\0')
+        {
+            AccommodationQueens(cheasBoard, y, x + 1, left, rigth, countQueens);
+        }
+        
+
+
     }
 
-    return true;
+    return;
 }
 
 void LokingCells(char[,] CheasBoard, int y, int x, int left, int rigth)
