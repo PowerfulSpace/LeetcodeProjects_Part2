@@ -103,10 +103,6 @@ void LokingCells(char[,] CheasBoard, int y, int x, int left, int rigth)
 }
 
 
-//Добавить рекурсивный метод, для откатывания назад вигур.
-//Откатанная фигура, должна будет сместиться на следующий свободный лемент в право
-
-
 void Print(char[,] CheasBoard)
 {
     for (int i = 0; i < CheasBoard.GetLength(0); i++)
