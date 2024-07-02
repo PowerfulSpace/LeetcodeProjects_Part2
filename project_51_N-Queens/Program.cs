@@ -45,9 +45,11 @@ void AccommodationQueens(char[,] cheasBoard, int y, int x, int left, int rigth, 
 
             if (cheasBoard[y, j] != '.' && cheasBoard[y, j] != 'Q')
             {
-                cheasBoard[y, j] = 'Q';
-                isAdd = true;
+                cheasBoard[y, j] = 'Q';               
                 x = j;
+
+                isAdd = true;
+                countQueens++;
 
                 break;
             }
@@ -94,7 +96,7 @@ void AccommodationQueens(char[,] cheasBoard, int y, int x, int left, int rigth, 
 void LokingCells(char[,] CheasBoard, int y, int x, int left, int rigth)
 {
     
-    for (int j = 0; j < CheasBoard.GetLength(0); j++)
+    for (int j = 0; j < CheasBoard.GetLength(0); j++, left++, rigth--)
     {
         if (CheasBoard[y, j] != 'Q') { CheasBoard[y, j] = '.'; }
         if (CheasBoard[j, x] != 'Q') { CheasBoard[j, x] = '.'; }
@@ -103,13 +105,11 @@ void LokingCells(char[,] CheasBoard, int y, int x, int left, int rigth)
         {
             if (CheasBoard[y, left] != 'Q' && CheasBoard[j, left] != 'Q') { CheasBoard[j, left] = '.'; }
         }
-        left++;
 
         if (rigth <= CheasBoard.GetLength(1) - 1 && rigth >= 0)
         {
             if (CheasBoard[y, rigth] != 'Q' && CheasBoard[j, rigth] != 'Q') { CheasBoard[j, rigth] = '.'; }
         }
-        rigth--;
     }
 }
 

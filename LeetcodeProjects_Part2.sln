@@ -79,7 +79,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_50_Pow(x,n)", "proj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_51_N-Queens", "project_51_N-Queens\project_51_N-Queens.csproj", "{BC2D49E3-5DD9-4DEC-A1E9-ABDD39EF4751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_52_N-Queens II", "project_52_N-Queens II\project_52_N-Queens II.csproj", "{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_52_N-Queens II", "project_52_N-Queens II\project_52_N-Queens II.csproj", "{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_51_N-Queens_2", "project_51_N-Queens_2\project_51_N-Queens_2.csproj", "{D27FB49F-7B7F-44C9-8741-6E366A74C829}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,10 @@ Global
 		{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D27FB49F-7B7F-44C9-8741-6E366A74C829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D27FB49F-7B7F-44C9-8741-6E366A74C829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D27FB49F-7B7F-44C9-8741-6E366A74C829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D27FB49F-7B7F-44C9-8741-6E366A74C829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
