@@ -72,22 +72,24 @@ void AccommodationQueens(char[,] cheasBoard, int y, int x, int left, int rigth, 
             Print(cheasBoard);
 
             AccommodationQueens(cheasBoard, y + 1, 0, left, rigth, countQueens);
+
+
+            if (countQueens < cheasBoard.GetLength(0))
+            {
+                int positionX = GetPositionQeen(cheasBoard, y, countQueens);
+
+                DeletePositionQeen(cheasBoard,y,countQueens);
+
+                cheasBoard[y, positionX] = countQueens > 1 ? num[countQueens - 1] : num[1];
+                countQueens--;
+
+                Print(cheasBoard);
+
+                AccommodationQueens(cheasBoard, y, positionX + 1, left, rigth, countQueens);
+            }
+
         }
-        else
-        {
-            return;
-        }
-
-        if (!isAdd)
-        {
-            int positionX = GetPositionQeen(cheasBoard,y, countQueens);
-            cheasBoard[y, positionX] = num[countQueens];
-
-            AccommodationQueens(cheasBoard, y, positionX + 1, left, rigth, countQueens);
-        }
-        y++;
-
-
+        
     }
 
     return;
@@ -146,8 +148,26 @@ int GetFreePosition(char[,] cheasBoard, int y)
     return positionX;
 }
 
+
+void DeletePositionQeen(char[,] cheasBoard, int y, int countQueens)
+{
+    char shouldBeRemove = num[countQueens];
+
+    for (int i = y; i < cheasBoard.GetLength(0); i++)
+    {
+        for (int j = 0; j < cheasBoard.GetLength(1); j++)
+        {
+            if (cheasBoard[i, j] == shouldBeRemove)
+            {
+                cheasBoard[i, j] = '\0';
+            }
+        }
+    }
+}
+
 void Print(char[,] CheasBoard)
 {
+    Console.WriteLine();
     for (int i = 0; i < CheasBoard.GetLength(0); i++)
     {
         for (int j = 0; j < CheasBoard.GetLength(1); j++)
