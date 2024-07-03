@@ -5,7 +5,7 @@ SolveNQueens(n1);
 
 Console.ReadLine();
 
-Dictionary<int, char> num;
+
 IList<IList<string>> SolveNQueens(int n)
 {
     var output = new List<IList<string>>();

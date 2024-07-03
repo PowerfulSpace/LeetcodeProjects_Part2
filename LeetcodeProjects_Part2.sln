@@ -81,7 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_51_N-Queens", "proj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_52_N-Queens II", "project_52_N-Queens II\project_52_N-Queens II.csproj", "{5A193B2B-2157-442A-9D9B-E9956C2CC6A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_51_N-Queens_2", "project_51_N-Queens_2\project_51_N-Queens_2.csproj", "{D27FB49F-7B7F-44C9-8741-6E366A74C829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_51_N-Queens_2", "project_51_N-Queens_2\project_51_N-Queens_2.csproj", "{D27FB49F-7B7F-44C9-8741-6E366A74C829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_51_N-Queens_3", "project_51_N-Queens_3\project_51_N-Queens_3.csproj", "{6B6E99C3-55BF-480A-B14F-1E318E4ADC58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,10 @@ Global
 		{D27FB49F-7B7F-44C9-8741-6E366A74C829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D27FB49F-7B7F-44C9-8741-6E366A74C829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D27FB49F-7B7F-44C9-8741-6E366A74C829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B6E99C3-55BF-480A-B14F-1E318E4ADC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B6E99C3-55BF-480A-B14F-1E318E4ADC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B6E99C3-55BF-480A-B14F-1E318E4ADC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B6E99C3-55BF-480A-B14F-1E318E4ADC58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
