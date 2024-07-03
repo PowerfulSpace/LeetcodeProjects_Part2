@@ -46,7 +46,7 @@ void AccommodationQueens(char[,] cheasBoard, int y, int x, int left, int rigth, 
     bool isAdd = false;
 
 
-    if (y < cheasBoard.GetLength(1))
+    while (countQueens < cheasBoard.GetLength(0))
     {
         for (int i = 0; i < cheasBoard.GetLength(0); i++)
         {
@@ -89,6 +89,7 @@ void AccommodationQueens(char[,] cheasBoard, int y, int x, int left, int rigth, 
             }
 
         }
+        else { return; }
 
     }
 

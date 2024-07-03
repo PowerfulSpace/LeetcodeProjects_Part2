@@ -8,186 +8,65 @@ Console.ReadLine();
 Dictionary<int, char> num;
 IList<IList<string>> SolveNQueens(int n)
 {
-    num = new Dictionary<int, char>()
+    var output = new List<IList<string>>();
+    if (n == 1)
     {
-        [1] = '1',
-        [2] = '2',
-        [3] = '3',
-        [4] = '4',
-        [5] = '5',
-        [6] = '6',
-        [7] = '7',
-        [8] = '8',
-        [9] = '9'
-    };
-
-    var result = new List<IList<string>>();
-
-    char[,] cheasBoard = new char[n, n];
-
-    int countQueens = 0;
-
-    int x = 0;
-    int y = 0;
-
-    int left = 0;
-    int rigth = 0;
-
-    AccommodationQueens(cheasBoard, y, x, left, rigth, countQueens);
-
-    return result;
-}
-
-void AccommodationQueens(char[,] cheasBoard, int y, int x, int left, int rigth, int countQueens)
-{
-    if (y > cheasBoard.GetLength(0) || x > cheasBoard.GetLength(0)) { return; }
-    if (countQueens == cheasBoard.GetLength(0)) { return; }
-
-    bool isAdd = false;
-
-
-    while (y < cheasBoard.GetLength(1))
-    {
-        for (int i = 0; i < cheasBoard.GetLength(0); i++)
-        {
-            if (cheasBoard[y, i] == '\0')
-            {
-                cheasBoard[y, i] = 'Q';
-                x = i;
-
-                isAdd = true;
-                countQueens++;
-
-                break;
-            }
-        }
-
-        if (isAdd)
-        {
-            left = x - y;
-            rigth = x + y;
-
-            LokingCells(cheasBoard, y, x, left, rigth, countQueens);
-
-            Print(cheasBoard);
-
-            AccommodationQueens(cheasBoard, y + 1, 0, left, rigth, countQueens);
-
-
-            if (countQueens < cheasBoard.GetLength(0))
-            {
-                int positionX = GetPositionQeen(cheasBoard, y, countQueens);
-
-                DeletePositionQeen(cheasBoard,y,countQueens);
-
-                cheasBoard[y, positionX] = countQueens > 1 ? num[countQueens - 1] : num[1];
-                countQueens--;
-
-                Print(cheasBoard);
-
-                AccommodationQueens(cheasBoard, y, positionX + 1, left, rigth, countQueens);
-            }
-
-        }
-        else { return; }
-        
+        output.Add(new List<string>() { "Q" });
+        return output;
     }
 
-    return;
-}
+    char[][] board = new char[n][];
 
-void LokingCells(char[,] cheasBoard, int y, int x, int left, int rigth,int countQueens)
-{
-
-    for (int j = 0; j < cheasBoard.GetLength(0); j++, left++, rigth--)
+    for (int i = 0; i < n; i++)
     {
-
-        if (cheasBoard[y, j] != 'Q' && !num.ContainsKey((int)Char.GetNumericValue(cheasBoard[y, j]))) { cheasBoard[y, j] = num[countQueens]; }
-        if (cheasBoard[j, x] != 'Q' && !num.ContainsKey((int)Char.GetNumericValue(cheasBoard[j, x]))) { cheasBoard[j, x] = num[countQueens]; }
-
-        if (left >= 0 && left <= cheasBoard.GetLength(1) - 1)
+        board[i] = new char[n];
+        for (int j = 0; j < n; j++)
         {
-            if (cheasBoard[y, left] != 'Q' && cheasBoard[j, left] != 'Q' && !num.ContainsKey((int)Char.GetNumericValue(cheasBoard[j, left]))) { cheasBoard[j, left] = num[countQueens]; }
+            board[i][j] = '.';
         }
+    }
 
-        if (rigth <= cheasBoard.GetLength(1) - 1 && rigth >= 0)
+    SolveBoard(board, output, 0);
+
+    return output;
+}
+void SolveBoard(char[][] board, List<IList<string>> output, int row)
+{
+    if (row == board.Length)
+    {
+        var solved = new List<string>();
+
+        foreach (var bRow in board)
         {
-            if (cheasBoard[y, rigth] != 'Q' && cheasBoard[j, rigth] != 'Q' && !num.ContainsKey((int)Char.GetNumericValue(cheasBoard[j, rigth]))) { cheasBoard[j, rigth] = num[countQueens]; }
+            solved.Add(string.Join("", bRow));
+        }
+        output.Add(solved);
+        return;
+    }
+
+    for (int col = 0; col < board.Length; col++)
+    {
+        if (IsSafe(board, row, col))
+        {
+            board[row][col] = 'Q';
+            SolveBoard(board, output, row + 1);
+            board[row][col] = '.';
         }
     }
 }
 
-int GetPositionQeen(char[,] cheasBoard, int y,int countQueens)
+bool IsSafe(char[][] board, int row, int col)
 {
-    int positionX = 0;
-
-    for (int i = 0; i < cheasBoard.GetLength(0); i++)
+    for (int i = 0; i < row; i++)
     {
-        if (cheasBoard[y, i] == 'Q')
-        {
-            positionX = i;
-            break;
-        }
+        if (board[i][col] == 'Q') return false;
+
+        int leftDiagonal = col - (row - i);
+        int righttDiagonal = col + (row - i);
+
+        if (leftDiagonal >= 0 && board[i][leftDiagonal] == 'Q') return false;
+        if (righttDiagonal < board.Length && board[i][righttDiagonal] == 'Q') return false;
     }
 
-    return positionX;
+    return true;
 }
-
-int GetFreePosition(char[,] cheasBoard, int y)
-{
-    int positionX = 0;
-
-    for (int i = 0; i < cheasBoard.GetLength(0); i++)
-    {
-        if (cheasBoard[y, i] == '\0')
-        {
-            positionX = i;
-            break;
-        }
-    }
-
-    return positionX;
-}
-
-
-void DeletePositionQeen(char[,] cheasBoard, int y, int countQueens)
-{
-    char shouldBeRemove = num[countQueens];
-
-    for (int i = y; i < cheasBoard.GetLength(0); i++)
-    {
-        for (int j = 0; j < cheasBoard.GetLength(1); j++)
-        {
-            if (cheasBoard[i, j] == shouldBeRemove)
-            {
-                cheasBoard[i, j] = '\0';
-            }
-        }
-    }
-}
-
-void Print(char[,] CheasBoard)
-{
-    Console.WriteLine();
-    for (int i = 0; i < CheasBoard.GetLength(0); i++)
-    {
-        for (int j = 0; j < CheasBoard.GetLength(1); j++)
-        {
-            if(CheasBoard[i, j] != '\0')
-            {
-                Console.Write(CheasBoard[i, j] + " ");
-            }
-            else
-            {
-                Console.Write("  ");
-            }
-            
-        }
-        Console.WriteLine();
-    }
-}
-
-//Добавить условия
-//1) Как только получается вся строка забита, и нету места добавить новый, откатываемся назад
-//2) Очищаем все числа элеманта связанные с количеством добавленных жлементов
-//3) Смещаемся в сторону, добавляем эллемент
