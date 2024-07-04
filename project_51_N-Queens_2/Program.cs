@@ -28,6 +28,8 @@ IList<IList<string>> SolveNQueens(int n)
 
     SolveBoard(board, output, 0);
 
+    Print(output);
+
     return output;
 }
 void SolveBoard(char[][] board, List<IList<string>> output, int row)
@@ -69,4 +71,18 @@ bool IsSafe(char[][] board, int row, int col)
     }
 
     return true;
+}
+
+void Print(List<IList<string>> output)
+{
+    Console.WriteLine();
+
+    foreach (var item in output)
+    {
+        foreach (var item2 in item)
+        {
+            Console.WriteLine(item2);
+        }
+        Console.WriteLine();
+    }
 }
