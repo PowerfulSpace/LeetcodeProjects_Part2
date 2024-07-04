@@ -1,4 +1,6 @@
 ﻿
+using System.Text;
+
 int n1 = 4;
 
 SolveNQueens(n1);
@@ -6,85 +8,66 @@ SolveNQueens(n1);
 Console.ReadLine();
 
 
+int size;
+IList<IList<string>> solutions;
 IList<IList<string>> SolveNQueens(int n)
 {
-    var output = new List<IList<string>>();
-
-    char[][] board = new char[4][];
-
+    size = n;
+    solutions = new List<IList<string>>();
+    char[,] emptyBoard = new char[n, n];
     for (int i = 0; i < n; i++)
     {
-        board[i] = new char[n];
         for (int j = 0; j < n; j++)
         {
-            board[i][j] = '.';
+            emptyBoard[i, j] = '.';
         }
     }
+    Backtrack(0, new HashSet<int>(), new HashSet<int>(), new HashSet<int>(), emptyBoard);
 
-    SolveBoard(board, output, 0);
-
-    Print(output);
-
-    return output;
+    return solutions;
+}
+void AddSolution(char[,] board)
+{
+    IList<string> solution = new List<string>();
+    StringBuilder sb;
+    for (int i = 0; i < size; i++)
+    {
+        sb = new StringBuilder();
+        for (int j = 0; j < size; j++)
+        {
+            sb.Append(board[i, j]);
+        }
+        solution.Add(sb.ToString());
+    }
+    solutions.Add(solution);
 }
 
-void SolveBoard(char[][] board, List<IList<string>> output, int row)
+void Backtrack(int row, HashSet<int> cols, HashSet<int> ds, HashSet<int> ads, char[,] board)
 {
-    if (row == board.Length)
+    if (row == size)
     {
-        List<string> list = new List<string>();
-        
-        foreach (var item in board)
-        {
-            list.Add(string.Join("",item));
-        }
-
-        output.Add(list);
-
+        AddSolution(board);
         return;
     }
 
-    for (int col = 0; col < board.Length; col++)
+    for (int col = 0; col < size; col++)
     {
-        if (isSafe(board, row, col))
+        int cd = row - col;
+        int cad = row + col;
+        if (cols.Contains(col) || ds.Contains(cd) || ads.Contains(cad))
         {
-            board[row][col] = 'Q';
-            SolveBoard(board, output, row + 1);
-            board[row][col] = '.';
+            continue;
         }
+        cols.Add(col);
+        ds.Add(cd);
+        ads.Add(cad);
+        board[row, col] = 'Q';
 
-    }
+        Backtrack(row + 1, cols, ds, ads, board);
 
-}
-
-bool isSafe(char[][] board, int row, int col)
-{
-
-    for (int step = 0; step < row; step++)
-    {
-        if (board[step][col] == 'Q') { return false; }
-
-        int left = col - (row - step);
-        int rigth = col + (row - step);
-
-        if(left >= 0 && board[step][left] == 'Q') { return false; }
-        if(rigth < board.Length && board[step][rigth] == 'Q') { return false; }
-    }
-
-    return true;
-}
-
-
-void Print(List<IList<string>> output)
-{
-    Console.WriteLine();
-
-    foreach (var item in output)
-    {
-        foreach (var item2 in item)
-        {
-            Console.WriteLine(item2);
-        }
-        Console.WriteLine();
+        cols.Remove(col);
+        ds.Remove(cd);
+        ads.Remove(cad);
+        board[row, col] = '.';
     }
 }
