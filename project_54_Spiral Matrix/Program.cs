@@ -40,7 +40,7 @@ IList<int> SpiralOrder(int[][] matrix)
             y++;
         }
     }
-
+    //Добавить направление в пространстве
 
     return result;
 }
