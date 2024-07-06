@@ -17,30 +17,42 @@ IList<int> SpiralOrder(int[][] matrix)
 
     bool[][] matrixLock = CreateEmptyMatrix(matrix);
 
-    int length = matrix.Length * matrix[0].Length;
+    int count = matrix.Length * matrix[0].Length;
+    int lengthX = matrix[0].Length;
+    int lengthY = matrix.Length;
 
-    int x = 0;
-    int y = 0;
+    Stack<int> x = new Stack<int>();
+    Stack<int> y = new Stack<int>();
 
-    for (int i = 0; i < length; i++)
+    y.Push(0);
+    x.Push(0);
+    //Добавить реализацию начального добавленнного элемента
+
+    while(count != 0)
     {
-        if(x < matrixLock[0].Length && x >= 0)
-        {
-            if (matrixLock[y][x] ==false)
-            {
-                result.Add(matrix[y][x]);
-                matrixLock[y][x] = true;
+        int numY = y.Peek();
+        int numX = x.Peek();
 
-                if(x < matrixLock[0].Length) { x++; }
-            }
+        if (numY < lengthX && matrixLock[numY][numX] == false)
+        {
+            result.Add(matrix[numY][numX]);
+            matrixLock[numY][numX] = true;
+
+            x.Push(x.Peek() + 1);
+            count--;
         }
-        else
+        else if (numY + 1 < lengthY && matrixLock[numY + 1][numX] == false)
         {
+            numY = y.Peek() + 1;
 
-            y++;
+            result.Add(matrix[numY][numX]);
+            matrixLock[numY][numX] = true;
+
+            y.Push(y.Peek() + 1);
+            count--;
         }
     }
-    //Добавить направление в пространстве
+
 
     return result;
 }
