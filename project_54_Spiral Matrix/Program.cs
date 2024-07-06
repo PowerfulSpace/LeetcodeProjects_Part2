@@ -27,7 +27,6 @@ IList<int> SpiralOrder(int[][] matrix)
     y.Push(0);
     x.Push(0);
     //Добавить реализацию начального добавленнного элемента
-    //Упростить переходы
 
     while(count != 0)
     {
