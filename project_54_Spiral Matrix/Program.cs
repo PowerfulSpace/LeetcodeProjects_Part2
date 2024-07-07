@@ -30,7 +30,7 @@ IList<int> SpiralOrder(int[][] matrix)
     //matrixLock[0][0] = true;
     bool drive = true;
     int side = 0;
-
+    //Добавить проверку на второй круг
 
     while (drive)
     {
