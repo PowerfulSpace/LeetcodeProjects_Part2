@@ -26,7 +26,7 @@ IList<int> SpiralOrder(int[][] matrix)
 
     y.Push(0);
     x.Push(0);
-    //result.Add(matrix[0][0]);
+    result.Add(matrix[0][0]);
     //matrixLock[0][0] = true;
     bool drive = true;
     int side = 0;
@@ -51,6 +51,13 @@ IList<int> SpiralOrder(int[][] matrix)
                         side = 1;
                     }
                 }
+                else if (x.Peek() < lengthX && matrixLock[y.Peek()][x.Peek()] == true)
+                {
+                    x.Push(x.Peek() + 1);
+                    y.Push(y.Peek() + 1);
+
+                    drive = !matrixLock[y.Peek()][x.Peek()];
+                }
                 else { side = 1; }
                 break;
             case 1:
@@ -66,6 +73,13 @@ IList<int> SpiralOrder(int[][] matrix)
                         x.Pop();
                         side = 2;
                     }
+                }
+                else if (y.Peek() < lengthY && matrixLock[y.Peek()][x.Peek()] == true)
+                {
+                    x.Pop();
+                    y.Pop();
+
+                    drive = !matrixLock[y.Peek()][x.Peek()];
                 }
                 else { side = 2; }
                 break;
@@ -83,6 +97,13 @@ IList<int> SpiralOrder(int[][] matrix)
                         side = 3;
                     }
                 }
+                else if (x.Peek() >= 0 && matrixLock[y.Peek()][x.Peek()] == true)
+                {
+                    x.Pop();
+                    y.Push(y.Peek() + 1);
+
+                    drive = !matrixLock[y.Peek()][x.Peek()];
+                }
                 else { side = 3; }
                 break;
             case 3:
@@ -99,9 +120,20 @@ IList<int> SpiralOrder(int[][] matrix)
                         side = 0;
                     }
                 }
+                else if (y.Peek() >= 0 && matrixLock[y.Peek()][x.Peek()] == true)
+                {
+                    //x.Push(x.Peek() + 1);
+                    //y.Pop();
+
+                    //drive = !matrixLock[y.Peek()][x.Peek()];
+
+                    side = 0;
+                }
                 else { side = 0; }
                 break;
         }
+
+        result.Add(matrix[y.Peek()][x.Peek()]);
 
     }
 
