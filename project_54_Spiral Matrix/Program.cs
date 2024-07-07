@@ -38,40 +38,80 @@ IList<int> SpiralOrder(int[][] matrix)
         switch (side)
         {
             case 0:
-                if (x.Peek() < lengthX && matrixLock[y.Peek()][x.Peek()] == false)
+                if (x.Peek() < lengthX)
                 {
-                    matrixLock[y.Peek()][x.Peek()] = true;
-                    if (x.Peek() < lengthX - 1)
+                    if (matrixLock[y.Peek()][x.Peek()] == false)
                     {
-                        x.Push(x.Peek() + 1);
-                    }
-                    else
-                    {
-                        y.Push(y.Peek() + 1);
-                        side = 1;
+                        matrixLock[y.Peek()][x.Peek()] = true;
+                        if (x.Peek() < lengthX - 1)
+                        {
+                            x.Push(x.Peek() + 1);
+                        }
+                        else
+                        {
+                            y.Push(y.Peek() + 1);
+                            side = 1;
+                        }
                     }
                 }
+                else { side = 1; }
                 break;
             case 1:
-                if (y.Peek() < lengthY && matrixLock[y.Peek()][x.Peek()] == false)
+                if (y.Peek() < lengthY)
                 {
-                    matrixLock[y.Peek()][x.Peek()] = true;
-                    if (y.Peek() < lengthY - 1)
+                    if (matrixLock[y.Peek()][x.Peek()] == false)
                     {
-                        y.Push(y.Peek() + 1);
-                    }
-                    else
-                    {
-                        x.Pop();
-                        side = 2;
+                        matrixLock[y.Peek()][x.Peek()] = true;
+                        if (y.Peek() < lengthY - 1)
+                        {
+                            y.Push(y.Peek() + 1);
+                        }
+                        else
+                        {
+                            x.Pop();
+                            side = 2;
+                        }
                     }
                 }
+                else { side = 2; }
                 break;
             case 2:
-                Console.WriteLine();
+                if (x.Peek() >= 0)
+                {
+                    if (matrixLock[y.Peek()][x.Peek()] == false)
+                    {
+                        matrixLock[y.Peek()][x.Peek()] = true;
+                        if (x.Peek() > 0)
+                        {
+                            x.Pop();
+                        }
+                        else
+                        {
+                            y.Pop();
+                            side = 3;
+                        }
+                    }
+                }
+                else { side = 3; }
                 break;
-            default:
-                Console.WriteLine();
+            case 3:
+                if (y.Peek() >= 0)
+                {
+                    if (matrixLock[y.Peek()][x.Peek()] == false)
+                    {
+                        matrixLock[y.Peek()][x.Peek()] = true;
+                        if (y.Peek() > 0)
+                        {
+                            y.Pop();
+                        }
+                        else
+                        {
+                            x.Push(x.Peek() + 1);
+                            side = 0;
+                        }
+                    }
+                }
+                else { side = 0; }
                 break;
         }
 
