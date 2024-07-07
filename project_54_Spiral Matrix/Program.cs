@@ -14,6 +14,7 @@ Console.ReadLine();
 IList<int> SpiralOrder(int[][] matrix)
 {
     List<int> result = new List<int>();
+    HashSet<int> set = new HashSet<int>();
 
     bool[][] matrixLock = CreateEmptyMatrix(matrix);
 
@@ -27,6 +28,7 @@ IList<int> SpiralOrder(int[][] matrix)
     y.Push(0);
     x.Push(0);
     result.Add(matrix[0][0]);
+    set.Add(matrix[0][0]);
     //matrixLock[0][0] = true;
     bool drive = true;
     int side = 0;
@@ -53,8 +55,9 @@ IList<int> SpiralOrder(int[][] matrix)
                 }
                 else if (x.Peek() < lengthX && matrixLock[y.Peek()][x.Peek()] == true)
                 {
-                    x.Push(x.Peek() + 1);
-                    y.Push(y.Peek() + 1);
+                    if(x.Peek() + 1 < lengthX) { x.Push(x.Peek() + 1); }
+
+                    if (y.Peek() + 1 < lengthY) { y.Push(y.Peek() + 1); }
 
                     drive = !matrixLock[y.Peek()][x.Peek()];
                 }
@@ -76,9 +79,9 @@ IList<int> SpiralOrder(int[][] matrix)
                 }
                 else if (y.Peek() < lengthY && matrixLock[y.Peek()][x.Peek()] == true)
                 {
-                    x.Pop();
-                    y.Pop();
-
+                    if(y.Count > 1) { x.Pop(); }
+                    if(x.Count > 1) { y.Pop(); }
+                    
                     drive = !matrixLock[y.Peek()][x.Peek()];
                 }
                 else { side = 2; }
@@ -99,8 +102,8 @@ IList<int> SpiralOrder(int[][] matrix)
                 }
                 else if (x.Peek() >= 0 && matrixLock[y.Peek()][x.Peek()] == true)
                 {
-                    x.Pop();
-                    y.Push(y.Peek() + 1);
+                    if(x.Count > 1) { x.Pop(); }
+                    if(y.Peek() + 1 < lengthY) { y.Push(y.Peek() + 1); }
 
                     drive = !matrixLock[y.Peek()][x.Peek()];
                 }
@@ -133,10 +136,11 @@ IList<int> SpiralOrder(int[][] matrix)
                 break;
         }
 
-        result.Add(matrix[y.Peek()][x.Peek()]);
-
+        //result.Add(matrix[y.Peek()][x.Peek()]);
+        set.Add(matrix[y.Peek()][x.Peek()]);
     }
 
+    result.AddRange(set);
 
     return result;
 }
