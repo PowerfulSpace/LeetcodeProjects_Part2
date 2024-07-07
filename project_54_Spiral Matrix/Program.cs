@@ -16,6 +16,21 @@ IList<int> SpiralOrder(int[][] matrix)
     List<int> result = new List<int>();
     HashSet<int> set = new HashSet<int>();
 
+   
+    if (matrix.Length == 1)
+    {
+        result.AddRange(matrix[0]);
+        return result;
+    }
+    if (matrix[0].Length == 1)
+    {
+        foreach (var item in matrix)
+        {
+            result.Add(item[0]);
+        }
+        return result;
+    }
+
     bool[][] matrixLock = CreateEmptyMatrix(matrix);
 
     int count = matrix.Length * matrix[0].Length;
@@ -27,7 +42,7 @@ IList<int> SpiralOrder(int[][] matrix)
 
     y.Push(0);
     x.Push(0);
-    result.Add(matrix[0][0]);
+    //result.Add(matrix[0][0]);
     set.Add(matrix[0][0]);
     //matrixLock[0][0] = true;
     bool drive = true;
