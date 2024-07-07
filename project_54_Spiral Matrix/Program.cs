@@ -26,31 +26,55 @@ IList<int> SpiralOrder(int[][] matrix)
 
     y.Push(0);
     x.Push(0);
-    //Добавить реализацию начального добавленнного элемента
+    //result.Add(matrix[0][0]);
+    //matrixLock[0][0] = true;
+    bool drive = true;
+    int side = 0;
 
-    while(count != 0)
+
+    while (drive)
     {
-        int numY = y.Peek();
-        int numX = x.Peek();
 
-        if (numY < lengthX && matrixLock[numY][numX] == false)
+        switch (side)
         {
-            result.Add(matrix[numY][numX]);
-            matrixLock[numY][numX] = true;
-
-            x.Push(x.Peek() + 1);
-            count--;
+            case 0:
+                if (x.Peek() < lengthX && matrixLock[y.Peek()][x.Peek()] == false)
+                {
+                    matrixLock[y.Peek()][x.Peek()] = true;
+                    if (x.Peek() < lengthX - 1)
+                    {
+                        x.Push(x.Peek() + 1);
+                    }
+                    else
+                    {
+                        y.Push(y.Peek() + 1);
+                        side = 1;
+                    }
+                }
+                break;
+            case 1:
+                if (y.Peek() < lengthY && matrixLock[y.Peek()][x.Peek()] == false)
+                {
+                    matrixLock[y.Peek()][x.Peek()] = true;
+                    if (y.Peek() < lengthY - 1)
+                    {
+                        y.Push(y.Peek() + 1);
+                    }
+                    else
+                    {
+                        x.Pop();
+                        side = 2;
+                    }
+                }
+                break;
+            case 2:
+                Console.WriteLine();
+                break;
+            default:
+                Console.WriteLine();
+                break;
         }
-        else if (numY + 1 < lengthY && matrixLock[numY + 1][numX] == false)
-        {
-            numY = y.Peek() + 1;
 
-            result.Add(matrix[numY][numX]);
-            matrixLock[numY][numX] = true;
-
-            y.Push(y.Peek() + 1);
-            count--;
-        }
     }
 
 
