@@ -99,6 +99,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_54_Spiral Matrix_2"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_54_Spiral Matrix_3", "project_54_Spiral Matrix_3\project_54_Spiral Matrix_3.csproj", "{0E13663A-A658-450A-90CF-1B1B92CE80F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_55_Jump Game", "project_55_Jump Game\project_55_Jump Game.csproj", "{62AFC7E0-3B97-45A5-BC09-C8DB5A8D94F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -297,6 +299,10 @@ Global
 		{0E13663A-A658-450A-90CF-1B1B92CE80F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E13663A-A658-450A-90CF-1B1B92CE80F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E13663A-A658-450A-90CF-1B1B92CE80F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62AFC7E0-3B97-45A5-BC09-C8DB5A8D94F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62AFC7E0-3B97-45A5-BC09-C8DB5A8D94F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62AFC7E0-3B97-45A5-BC09-C8DB5A8D94F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62AFC7E0-3B97-45A5-BC09-C8DB5A8D94F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
