@@ -28,14 +28,14 @@ bool CanJump(int[] nums)
 
 bool IsSuccessfulJump(int[] nums, int index)
 {
-    if (index >= nums.Length - 1) { return true; }
+    if(index >= nums.Length - 1) { return true; }
 
     for (int i = index; i < nums.Length; i++)
     {
         int value = nums[i];
-        if (value == 0) { break; }
+        if(value == 0) { break; }
 
-        while (value > 0)
+        while(value > 0)
         {
             bool result = IsSuccessfulJump(nums, i + value);
             if (result) { return result; }
