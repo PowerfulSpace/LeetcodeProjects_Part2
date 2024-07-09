@@ -17,31 +17,36 @@ Console.ReadLine();
 
 bool CanJump(int[] nums)
 {
-    if (nums.Length == 1) { return true; }
-    if (nums[0] == 0) { return false; }
+    if (nums.Length <= 1) return true;
+    else if (nums[0] == 0) return false;
 
-    bool result = IsSuccessfulJump(nums, 0);
-    return result;
-}
+    int steps = 1;
+    int currentIndex = 0;
+    int lastIndex = nums.Length - 1;
 
-
-
-bool IsSuccessfulJump(int[] nums, int index)
-{
-    if(index >= nums.Length - 1) { return true; }
-
-    for (int i = index; i < nums.Length; i++)
+    while (currentIndex < lastIndex)
     {
-        int value = nums[i];
-        if(value == 0) { break; }
+        int currentNum = nums[currentIndex];
 
-        while(value > 0)
+        if (currentIndex + currentNum >= lastIndex) return true;
+
+        int nextIndex = -1;
+        int nextMaxJump = 0;
+
+        for (int i = 1; i <= currentNum; i++)
         {
-            bool result = IsSuccessfulJump(nums, i + value);
-            if (result) { return result; }
-            value--;
+            if (i + nums[currentIndex + i] > nextMaxJump)
+            {
+                nextIndex = i + currentIndex;
+                nextMaxJump = i + nums[currentIndex + i];
+            }
         }
+
+        if (nextIndex == -1) return false;
+
+        steps++;
+        currentIndex = nextIndex;
     }
 
-    return false;
+    return steps > 0;
 }
