@@ -105,6 +105,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_55_Jump Game_2", "p
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_55_Jump Game_3", "project_55_Jump Game_3\project_55_Jump Game_3.csproj", "{09839D30-CC79-438C-BC4C-788B5ACF81A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_56_ Merge Intervals", "project_56_ Merge Intervals\project_56_ Merge Intervals.csproj", "{80C83C82-A6AF-48CC-972F-A7183AB4E685}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +317,10 @@ Global
 		{09839D30-CC79-438C-BC4C-788B5ACF81A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09839D30-CC79-438C-BC4C-788B5ACF81A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09839D30-CC79-438C-BC4C-788B5ACF81A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80C83C82-A6AF-48CC-972F-A7183AB4E685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C83C82-A6AF-48CC-972F-A7183AB4E685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C83C82-A6AF-48CC-972F-A7183AB4E685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C83C82-A6AF-48CC-972F-A7183AB4E685}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
