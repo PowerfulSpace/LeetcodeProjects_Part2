@@ -1,7 +1,5 @@
 ﻿
 
-using System.Collections.Generic;
-
 int[][] nums1 = new int[4][]
 {
     new int[]{1,3 },
