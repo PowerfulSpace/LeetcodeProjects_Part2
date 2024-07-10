@@ -109,6 +109,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_56_ Merge Intervals
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_56_ Merge Intervals_2", "project_56_ Merge Intervals_2\project_56_ Merge Intervals_2.csproj", "{5D3F899E-36C7-4CED-B217-B88243045302}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_56_ Merge Intervals_3", "project_56_ Merge Intervals_3\project_56_ Merge Intervals_3.csproj", "{D5294376-27C4-4CFF-9334-DA3C3D2F53EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -327,6 +329,10 @@ Global
 		{5D3F899E-36C7-4CED-B217-B88243045302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D3F899E-36C7-4CED-B217-B88243045302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3F899E-36C7-4CED-B217-B88243045302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5294376-27C4-4CFF-9334-DA3C3D2F53EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5294376-27C4-4CFF-9334-DA3C3D2F53EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5294376-27C4-4CFF-9334-DA3C3D2F53EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5294376-27C4-4CFF-9334-DA3C3D2F53EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

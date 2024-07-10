@@ -54,5 +54,5 @@ int[][] Merge(int[][] intervals)
 
     res.Add(new int[] { intervalStart, intervalEnd });
 
-    return res.ToArray(); ;
+    return res.ToArray();
 }
