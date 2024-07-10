@@ -30,11 +30,8 @@ Console.ReadLine();
 
 int[][] Insert(int[][] intervals, int[] newInterval)
 {
- 
 
     List<int[]> result = new List<int[]>();
-
-  
 
     return result.ToArray();
 }
