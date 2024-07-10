@@ -11,6 +11,9 @@ Console.ReadLine();
 
 int[][] GenerateMatrix(int n)
 {
+    List<int> result = new List<int>();
+
+
     return new int[n][];
 }
 
