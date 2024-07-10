@@ -113,6 +113,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_56_ Merge Intervals
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_57_Insert Interval", "project_57_Insert Interval\project_57_Insert Interval.csproj", "{66695F40-7105-4BAC-AA9B-53D05E8B4661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_57_Insert Interval_2", "project_57_Insert Interval_2\project_57_Insert Interval_2.csproj", "{8CB4D06B-BE56-4C83-9D06-A31D3111B04D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -339,6 +341,10 @@ Global
 		{66695F40-7105-4BAC-AA9B-53D05E8B4661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66695F40-7105-4BAC-AA9B-53D05E8B4661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66695F40-7105-4BAC-AA9B-53D05E8B4661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB4D06B-BE56-4C83-9D06-A31D3111B04D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB4D06B-BE56-4C83-9D06-A31D3111B04D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB4D06B-BE56-4C83-9D06-A31D3111B04D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB4D06B-BE56-4C83-9D06-A31D3111B04D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
