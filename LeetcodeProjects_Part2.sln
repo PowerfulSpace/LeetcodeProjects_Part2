@@ -107,15 +107,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_55_Jump Game_3", "p
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_56_ Merge Intervals", "project_56_ Merge Intervals\project_56_ Merge Intervals.csproj", "{80C83C82-A6AF-48CC-972F-A7183AB4E685}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_56_ Merge Intervals_2", "project_56_ Merge Intervals_2\project_56_ Merge Intervals_2.csproj", "{5D3F899E-36C7-4CED-B217-B88243045302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_56_ Merge Intervals_2", "project_56_ Merge Intervals_2\project_56_ Merge Intervals_2.csproj", "{5D3F899E-36C7-4CED-B217-B88243045302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_56_ Merge Intervals_3", "project_56_ Merge Intervals_3\project_56_ Merge Intervals_3.csproj", "{D5294376-27C4-4CFF-9334-DA3C3D2F53EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_56_ Merge Intervals_3", "project_56_ Merge Intervals_3\project_56_ Merge Intervals_3.csproj", "{D5294376-27C4-4CFF-9334-DA3C3D2F53EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_57_Insert Interval", "project_57_Insert Interval\project_57_Insert Interval.csproj", "{66695F40-7105-4BAC-AA9B-53D05E8B4661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_57_Insert Interval", "project_57_Insert Interval\project_57_Insert Interval.csproj", "{66695F40-7105-4BAC-AA9B-53D05E8B4661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_57_Insert Interval_2", "project_57_Insert Interval_2\project_57_Insert Interval_2.csproj", "{8CB4D06B-BE56-4C83-9D06-A31D3111B04D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_57_Insert Interval_2", "project_57_Insert Interval_2\project_57_Insert Interval_2.csproj", "{8CB4D06B-BE56-4C83-9D06-A31D3111B04D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_58_Length of Last Word", "project_58_Length of Last Word\project_58_Length of Last Word.csproj", "{F4A7183F-5C2D-4ABD-97E3-4FC85DEAC2DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_58_Length of Last Word", "project_58_Length of Last Word\project_58_Length of Last Word.csproj", "{F4A7183F-5C2D-4ABD-97E3-4FC85DEAC2DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_57_Insert Interval_3", "project_57_Insert Interval_3\project_57_Insert Interval_3.csproj", "{D32019FA-B1AE-4FE4-A7B3-782F3CE436F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -351,6 +353,10 @@ Global
 		{F4A7183F-5C2D-4ABD-97E3-4FC85DEAC2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A7183F-5C2D-4ABD-97E3-4FC85DEAC2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A7183F-5C2D-4ABD-97E3-4FC85DEAC2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D32019FA-B1AE-4FE4-A7B3-782F3CE436F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32019FA-B1AE-4FE4-A7B3-782F3CE436F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32019FA-B1AE-4FE4-A7B3-782F3CE436F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32019FA-B1AE-4FE4-A7B3-782F3CE436F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
