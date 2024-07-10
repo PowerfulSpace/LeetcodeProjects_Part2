@@ -1,5 +1,8 @@
 ﻿
 
+using System.Collections;
+using System.Linq;
+
 int[][] nums1 = new int[2][]
 {
     new int[]{1,3 },
@@ -21,9 +24,9 @@ int[][] nums3 = new int[1][]
 
 };
 
-Insert(nums1, new int[] { 2, 5 });
-Insert(nums2, new int[] { 4, 8 });
-Insert(nums3, new int[] { 2, 7 });
+//Insert(nums1, new int[] { 2, 5 });
+//Insert(nums2, new int[] { 4, 8 });
+Insert(nums3, new int[] { 0,0});
 
 
 Console.ReadLine();
@@ -31,7 +34,27 @@ Console.ReadLine();
 int[][] Insert(int[][] intervals, int[] newInterval)
 {
 
-    List<int[]> result = new List<int[]>();
+     var result = new List<int[]>();
+
+    foreach (var interval in intervals)
+    {
+        if (interval[1] < newInterval[0])
+        {
+            result.Add(interval);
+        }
+        else if (interval[0] > newInterval[1])
+        {
+            result.Add(newInterval);
+            newInterval = interval;
+        }
+        else
+        {
+            newInterval[0] = Math.Min(interval[0], newInterval[0]);
+            newInterval[1] = Math.Max(interval[1], newInterval[1]);
+        }
+    }
+
+    result.Add(newInterval);
 
     return result.ToArray();
 }
