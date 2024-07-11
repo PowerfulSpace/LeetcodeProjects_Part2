@@ -127,7 +127,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_59_Spiral Matrix II
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_60_Permutation Sequence", "project_60_Permutation Sequence\project_60_Permutation Sequence.csproj", "{A9A44773-5B6C-4367-84CC-650A9BF1D398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_60_Permutation Sequence_2", "project_60_Permutation Sequence_2\project_60_Permutation Sequence_2.csproj", "{0E728776-3D3B-4CA5-9F76-766E36C45231}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_60_Permutation Sequence_2", "project_60_Permutation Sequence_2\project_60_Permutation Sequence_2.csproj", "{0E728776-3D3B-4CA5-9F76-766E36C45231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_60_Permutation Sequence_3", "project_60_Permutation Sequence_3\project_60_Permutation Sequence_3.csproj", "{E3FD21BA-8F2C-45DB-AF8F-C760CEAE1FDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -387,6 +389,10 @@ Global
 		{0E728776-3D3B-4CA5-9F76-766E36C45231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E728776-3D3B-4CA5-9F76-766E36C45231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E728776-3D3B-4CA5-9F76-766E36C45231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3FD21BA-8F2C-45DB-AF8F-C760CEAE1FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FD21BA-8F2C-45DB-AF8F-C760CEAE1FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FD21BA-8F2C-45DB-AF8F-C760CEAE1FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3FD21BA-8F2C-45DB-AF8F-C760CEAE1FDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
