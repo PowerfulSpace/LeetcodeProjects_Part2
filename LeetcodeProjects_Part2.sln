@@ -123,9 +123,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_58_Length of Last W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_59_Spiral Matrix II", "project_59_Spiral Matrix II\project_59_Spiral Matrix II.csproj", "{21F4AD8E-053E-43A4-A728-7EFB9F1CF866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_59_Spiral Matrix II_2", "project_59_Spiral Matrix II_2\project_59_Spiral Matrix II_2.csproj", "{3B583381-965C-484F-BD98-0E4566B89B4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_59_Spiral Matrix II_2", "project_59_Spiral Matrix II_2\project_59_Spiral Matrix II_2.csproj", "{3B583381-965C-484F-BD98-0E4566B89B4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_60_Permutation Sequence", "project_60_Permutation Sequence\project_60_Permutation Sequence.csproj", "{A9A44773-5B6C-4367-84CC-650A9BF1D398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_60_Permutation Sequence", "project_60_Permutation Sequence\project_60_Permutation Sequence.csproj", "{A9A44773-5B6C-4367-84CC-650A9BF1D398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_60_Permutation Sequence_2", "project_60_Permutation Sequence_2\project_60_Permutation Sequence_2.csproj", "{0E728776-3D3B-4CA5-9F76-766E36C45231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -381,6 +383,10 @@ Global
 		{A9A44773-5B6C-4367-84CC-650A9BF1D398}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9A44773-5B6C-4367-84CC-650A9BF1D398}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9A44773-5B6C-4367-84CC-650A9BF1D398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E728776-3D3B-4CA5-9F76-766E36C45231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E728776-3D3B-4CA5-9F76-766E36C45231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E728776-3D3B-4CA5-9F76-766E36C45231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E728776-3D3B-4CA5-9F76-766E36C45231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
