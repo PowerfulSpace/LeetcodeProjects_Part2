@@ -129,11 +129,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_60_Permutation Sequ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_60_Permutation Sequence_2", "project_60_Permutation Sequence_2\project_60_Permutation Sequence_2.csproj", "{0E728776-3D3B-4CA5-9F76-766E36C45231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_60_Permutation Sequence_3", "project_60_Permutation Sequence_3\project_60_Permutation Sequence_3.csproj", "{E3FD21BA-8F2C-45DB-AF8F-C760CEAE1FDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_60_Permutation Sequence_3", "project_60_Permutation Sequence_3\project_60_Permutation Sequence_3.csproj", "{E3FD21BA-8F2C-45DB-AF8F-C760CEAE1FDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_60_Permutation Sequence_4", "project_60_Permutation Sequence_4\project_60_Permutation Sequence_4.csproj", "{5EFA953A-A5E8-4A6E-BEE0-247BCBA8366B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_60_Permutation Sequence_4", "project_60_Permutation Sequence_4\project_60_Permutation Sequence_4.csproj", "{5EFA953A-A5E8-4A6E-BEE0-247BCBA8366B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_61_Rotate List", "project_61_Rotate List\project_61_Rotate List.csproj", "{0B74E7DB-C083-4C4A-9ACE-5DBCB436453E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_61_Rotate List", "project_61_Rotate List\project_61_Rotate List.csproj", "{0B74E7DB-C083-4C4A-9ACE-5DBCB436453E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_61_Rotate List_2", "project_61_Rotate List_2\project_61_Rotate List_2.csproj", "{A0C06326-7238-43DF-BCCF-036561F33879}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -405,6 +407,10 @@ Global
 		{0B74E7DB-C083-4C4A-9ACE-5DBCB436453E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B74E7DB-C083-4C4A-9ACE-5DBCB436453E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B74E7DB-C083-4C4A-9ACE-5DBCB436453E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C06326-7238-43DF-BCCF-036561F33879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C06326-7238-43DF-BCCF-036561F33879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C06326-7238-43DF-BCCF-036561F33879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C06326-7238-43DF-BCCF-036561F33879}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
