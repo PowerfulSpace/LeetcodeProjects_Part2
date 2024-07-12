@@ -20,22 +20,22 @@ int UniquePaths(int m, int n)
     return result;
 }
 
-int GetFoundPaths(int yLength,int xLength, int cY, int cX, int count)
+int GetFoundPaths(int yLength,int xLength, int y, int x, int count)
 {
-    if (cY > yLength - 1) { return count; }
-    if (cY == yLength - 1 && cX == xLength - 1)
+    if (y > yLength - 1) { return count; }
+    if (y == yLength - 1 && x == xLength - 1)
     {
         count++;
         return count;
     }
 
-    for (int x = cX; x < xLength; x++)
+    for (int i = x; i < xLength; i++)
     {
-        if (cY < yLength)
+        if (y < yLength)
         {
-            count = GetFoundPaths(yLength, xLength, cY, x + 1, count);
+            count = GetFoundPaths(yLength, xLength, y, i + 1, count);
         }
-        count = GetFoundPaths(yLength, xLength, cY + 1, cX, count);
+        count = GetFoundPaths(yLength, xLength, y + 1, x, count);
 
         return count;
     }
