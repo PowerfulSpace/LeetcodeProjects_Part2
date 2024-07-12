@@ -15,32 +15,38 @@ Console.ReadLine();
 ListNode RotateRight(ListNode head, int k)
 {
     ListNode first = head;
-    ListNode last = head;
-    k = -k;
+    ListNode last = new ListNode();
+    int index = 0;
 
-    while(first != null)
+    while (first != null)
     {
-        k++;
+        index++;
         if (first.next == null)
         {
             last = first;
             first.next = head;
             break;
-        }       
+        }
         first = first.next;
     }
 
-    if (k >= 0)
+    if (index >= k)
     {
-        while (k > 0)
+        index = index - k;
+
+        while (index > 0)
         {
             head = head.next;
-            k--;
+            index--;
         }
     }
-    else { return last; }
+    else
+    {
+        return last;
+    }
 
-    return head;    
+
+    return head;
 }
 
 
