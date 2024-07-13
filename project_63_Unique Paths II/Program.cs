@@ -19,8 +19,8 @@ int[][] array3 = new int[3][]
     new int[2] {0,0}
 };
 
-//Console.WriteLine(UniquePathsWithObstacles(array1));
-//Console.WriteLine(UniquePathsWithObstacles(array2));
+Console.WriteLine(UniquePathsWithObstacles(array1));
+Console.WriteLine(UniquePathsWithObstacles(array2));
 Console.WriteLine(UniquePathsWithObstacles(array3));
 
 Console.ReadLine();
