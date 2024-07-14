@@ -14,10 +14,10 @@ int[][] array2 = new int[2][]
 
 int[][] array3 = new int[5][]
 {
-    new int[4] {0,0,0,0},
     new int[4] {0,1,0,0},
+    new int[4] {1,0,0,0},
     new int[4] {0,0,0,0},
-    new int[4] {0,0,1,0},
+    new int[4] {0,0,0,0},
     new int[4] {0,0,0,0}
 };
 
@@ -77,10 +77,10 @@ int[][] array6 = new int[5][]
 };
 
 
-Console.WriteLine(UniquePathsWithObstacles(array1));
-Console.WriteLine(UniquePathsWithObstacles(array2));
+//Console.WriteLine(UniquePathsWithObstacles(array1));
+//Console.WriteLine(UniquePathsWithObstacles(array2));
 Console.WriteLine(UniquePathsWithObstacles(array3));
-Console.WriteLine(UniquePathsWithObstacles(array4));
+//Console.WriteLine(UniquePathsWithObstacles(array4));
 //Console.WriteLine(UniquePathsWithObstacles(array5));
 //Console.WriteLine(UniquePathsWithObstacles(array6));
 
@@ -94,15 +94,17 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
 
     int[][] array = Filling(obstacleGrid);
 
-    //if (array[array.Length - 1][array[0].Length - 1] == 0) { return 0; }
+    bool isClosed = true;
 
     for (int i = 1; i < array.Length; i++)
     {
+        isClosed = true;
         for (int j = 1; j < array[0].Length; j++)
         {
             if (array[i][j] == -1) { continue; }
             else
             {
+                isClosed = false;
                 int a = array[i - 1][j] == -1 ? 0 : array[i - 1][j];
                 int b = array[i][j - 1] == -1 ? 0 : array[i][j - 1];
 
@@ -110,6 +112,7 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
             }
 
         }
+        if( isClosed) { break; }
     }
 
     return array[array.Length - 1][array[0].Length - 1];
@@ -125,6 +128,7 @@ int[][] Filling(int[][] array)
         if (array[0][i] == 1)
         {
             array[0][i] = -1;
+            break;
         }
         else { array[0][i] = 1; }
     }
@@ -133,6 +137,7 @@ int[][] Filling(int[][] array)
         if (array[i][0] == 1)
         {
             array[i][0] = -1;
+            break;
         }
         else { array[i][0] = 1; }
     }
