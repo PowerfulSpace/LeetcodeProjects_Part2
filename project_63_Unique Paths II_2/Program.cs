@@ -67,11 +67,22 @@ int[][] array5 = new int[29][]
 };
 
 
+int[][] array6 = new int[5][]
+{
+    new int[5] {0,0,1,0,0},
+    new int[5] {0,0,0,0,0},
+    new int[5] {1,0,0,1,0},
+    new int[5] {0,1,0,1,0},
+    new int[5] {0,0,0,0,0}
+};
+
+
 Console.WriteLine(UniquePathsWithObstacles(array1));
 Console.WriteLine(UniquePathsWithObstacles(array2));
 Console.WriteLine(UniquePathsWithObstacles(array3));
 Console.WriteLine(UniquePathsWithObstacles(array4));
 //Console.WriteLine(UniquePathsWithObstacles(array5));
+//Console.WriteLine(UniquePathsWithObstacles(array6));
 
 Console.ReadLine();
 
@@ -83,7 +94,7 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
 
     int[][] array = Filling(obstacleGrid);
 
-    if (array[array.Length - 1][array[0].Length - 1] == 0) { return 0; }
+    //if (array[array.Length - 1][array[0].Length - 1] == 0) { return 0; }
 
     for (int i = 1; i < array.Length; i++)
     {
@@ -108,38 +119,32 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
 
 int[][] Filling(int[][] array)
 {
-    for (int i = 0; i < array.Length; i++)
+
+    for (int i = 0; i < array[0].Length; i++)
     {
-        for (int x = i; x < array[0].Length; x++)
+        if (array[0][i] == 1)
         {
-
-            if (array[i][x] == 0)
-            {
-                array[i][x] = 1;
-            }
-            else
-            {
-                array[i][x] = -1;
-                break;
-                
-            }        
+            array[0][i] = -1;
         }
-
-        if (i < array[0].Length)
+        else { array[0][i] = 1; }
+    }
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i][0] == 1)
         {
-            for (int y = i + 1; y < array.Length; y++)
+            array[i][0] = -1;
+        }
+        else { array[i][0] = 1; }
+    }
+
+
+    for (int i = 1; i < array.Length; i++)
+    {
+        for (int j = 1; j < array[0].Length; j++)
+        {
+            if (array[i][j] == 1)
             {
-
-                if (array[y][i] == 0)
-                {
-                    array[y][i] = 1;
-                }
-                else
-                {
-                    array[y][i] = -1;
-                    break;
-                }
-
+                array[i][j] = -1;
             }
         }
     }

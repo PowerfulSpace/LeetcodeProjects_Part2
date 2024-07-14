@@ -67,11 +67,22 @@ int[][] array5 = new int[29][]
 };
 
 
-Console.WriteLine(UniquePathsWithObstacles(array1));
-Console.WriteLine(UniquePathsWithObstacles(array2));
-Console.WriteLine(UniquePathsWithObstacles(array3));
-Console.WriteLine(UniquePathsWithObstacles(array4));
-//Console.WriteLine(UniquePathsWithObstacles(array5));
+int[][] array6 = new int[5][]
+{
+    new int[5] {0,0,1,0,0},
+    new int[5] {0,0,0,0,0},
+    new int[5] {1,0,0,1,0},
+    new int[5] {0,1,0,1,0},
+    new int[5] {0,0,0,0,0}
+};
+
+
+//Console.WriteLine(UniquePathsWithObstacles(array1));
+//Console.WriteLine(UniquePathsWithObstacles(array2));
+//Console.WriteLine(UniquePathsWithObstacles(array3));
+//Console.WriteLine(UniquePathsWithObstacles(array4));
+Console.WriteLine(UniquePathsWithObstacles(array5));
+//Console.WriteLine(UniquePathsWithObstacles(array6));
 
 Console.ReadLine();
 
@@ -120,8 +131,12 @@ int[][] Filling(int[][] array)
             else
             {
                 array[i][x] = -1;
-                break;
 
+                for (int k = x + 1; k < array[0].Length; k++)
+                {
+                    array[i][k] = 0;
+                }
+                break;
             }
         }
 
@@ -137,6 +152,12 @@ int[][] Filling(int[][] array)
                 else
                 {
                     array[y][i] = -1;
+
+                    for (int k = y + 1; k < array.Length; k++)
+                    {
+                        array[k][i] = 0;
+                    }
+
                     break;
                 }
 
