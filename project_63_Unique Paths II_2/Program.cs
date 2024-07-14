@@ -121,8 +121,8 @@ int[][] Filling(int[][] array)
             {
                 array[i][x] = -1;
                 break;
-
-            }
+                
+            }        
         }
 
         if (i < array[0].Length)
@@ -147,7 +147,7 @@ int[][] Filling(int[][] array)
 }
 
 
-void Print(int[][] array)
+void Print(int [][] array)
 {
     Console.WriteLine();
     for (int i = 0; i < array.Length; i++)
