@@ -76,13 +76,27 @@ int[][] array6 = new int[5][]
     new int[5] {0,0,0,0,0}
 };
 
+int[][] array7 = new int[9][]
+{
+    new int[9] {0,0,0,0,0,1,0,0,0},
+    new int[9] {0,0,0,0,1,0,0,1,0},
+    new int[9] {0,1,0,0,0,0,0,0,0},
+    new int[9] {0,0,1,0,0,1,1,0,1},
+    new int[9] {1,0,0,1,0,1,0,0,0},
+    new int[9] {0,0,1,0,0,0,0,1,0},
+    new int[9] {0,0,0,0,0,1,0,0,1},
+    new int[9] {0,0,0,0,1,0,0,0,0},
+    new int[9] {0,0,0,1,0,0,0,0,0}
+};
+
 
 //Console.WriteLine(UniquePathsWithObstacles(array1));
 //Console.WriteLine(UniquePathsWithObstacles(array2));
-Console.WriteLine(UniquePathsWithObstacles(array3));
+//Console.WriteLine(UniquePathsWithObstacles(array3));
 //Console.WriteLine(UniquePathsWithObstacles(array4));
-//Console.WriteLine(UniquePathsWithObstacles(array5));
+Console.WriteLine(UniquePathsWithObstacles(array5));
 //Console.WriteLine(UniquePathsWithObstacles(array6));
+//Console.WriteLine(UniquePathsWithObstacles(array7));
 
 Console.ReadLine();
 
@@ -115,6 +129,8 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
         if( isClosed) { break; }
     }
 
+    //Print(array);
+
     return array[array.Length - 1][array[0].Length - 1];
 }
 
@@ -122,24 +138,43 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
 
 int[][] Filling(int[][] array)
 {
+    bool isBlock = false;
 
     for (int i = 0; i < array[0].Length; i++)
     {
-        if (array[0][i] == 1)
+        if (!isBlock)
         {
-            array[0][i] = -1;
-            break;
+            if (array[0][i] == 1)
+            {
+                array[0][i] = -1;
+                isBlock = true;
+            }
+            else { array[0][i] = 1; }
         }
-        else { array[0][i] = 1; }
+        else
+        {
+            if (array[0][i] == 1) { array[0][i] = -1; }
+        }
+      
     }
+    isBlock = false;
+
     for (int i = 1; i < array.Length; i++)
     {
-        if (array[i][0] == 1)
+        if (!isBlock)
         {
-            array[i][0] = -1;
-            break;
+            if (array[i][0] == 1)
+            {
+                array[i][0] = -1;
+                isBlock = true;
+            }
+            else { array[i][0] = 1; }
         }
-        else { array[i][0] = 1; }
+        else
+        {
+            if (array[i][0] == 1) { array[i][0] = -1; }
+        }
+       
     }
 
 
@@ -164,8 +199,13 @@ void Print(int [][] array)
     {
         for (int j = 0; j < array[0].Length; j++)
         {
-            Console.Write("{0,2} ", array[i][j]);
+            Console.Write("{0,-10} ", array[i][j]);
         }
         Console.WriteLine();
     }
 }
+
+
+
+
+
