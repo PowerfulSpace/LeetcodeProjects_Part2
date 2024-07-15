@@ -21,82 +21,12 @@ int[][] array3 = new int[5][]
     new int[4] {0,0,0,0}
 };
 
-int[][] array4 = new int[7][]
-{
-    new int[2] {0,0},
-    new int[2] {0,0},
-    new int[2] {1,0},
-    new int[2] {0,0},
-    new int[2] {0,1},
-    new int[2] {0,0},
-    new int[2] {0,0}
-};
 
-int[][] array5 = new int[29][]
-{
-    new int[18] {0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-    new int[18] {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0},
-    new int[18] {1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1},
-    new int[18] {0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    new int[18] {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    new int[18] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0},
-    new int[18] {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0},
-    new int[18] {1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-    new int[18] {0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-    new int[18] {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-    new int[18] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    new int[18] {1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0},
-    new int[18] {0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
-    new int[18] {0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-    new int[18] {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1},
-    new int[18] {0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
-    new int[18] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},
-    new int[18] {1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0},
-    new int[18] {0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0},
-    new int[18] {0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    new int[18] {0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-    new int[18] {0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0},
-    new int[18] {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1},
-    new int[18] {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0},
-    new int[18] {1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    new int[18] {0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    new int[18] {0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0},
-    new int[18] {1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1},
-    new int[18] {1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0}
-
-};
+Console.WriteLine(UniquePathsWithObstacles(array1));
+Console.WriteLine(UniquePathsWithObstacles(array2));
+Console.WriteLine(UniquePathsWithObstacles(array3));
 
 
-int[][] array6 = new int[5][]
-{
-    new int[5] {0,0,1,0,0},
-    new int[5] {0,0,0,0,0},
-    new int[5] {1,0,0,1,0},
-    new int[5] {0,1,0,1,0},
-    new int[5] {0,0,0,0,0}
-};
-
-int[][] array7 = new int[9][]
-{
-    new int[9] {0,0,0,0,0,1,0,0,0},
-    new int[9] {0,0,0,0,1,0,0,1,0},
-    new int[9] {0,1,0,0,0,0,0,0,0},
-    new int[9] {0,0,1,0,0,1,1,0,1},
-    new int[9] {1,0,0,1,0,1,0,0,0},
-    new int[9] {0,0,1,0,0,0,0,1,0},
-    new int[9] {0,0,0,0,0,1,0,0,1},
-    new int[9] {0,0,0,0,1,0,0,0,0},
-    new int[9] {0,0,0,1,0,0,0,0,0}
-};
-
-
-//Console.WriteLine(UniquePathsWithObstacles(array1));
-//Console.WriteLine(UniquePathsWithObstacles(array2));
-//Console.WriteLine(UniquePathsWithObstacles(array3));
-//Console.WriteLine(UniquePathsWithObstacles(array4));
-Console.WriteLine(UniquePathsWithObstacles(array5));
-//Console.WriteLine(UniquePathsWithObstacles(array6));
-//Console.WriteLine(UniquePathsWithObstacles(array7));
 
 Console.ReadLine();
 
@@ -104,106 +34,45 @@ Console.ReadLine();
 
 int UniquePathsWithObstacles(int[][] obstacleGrid)
 {
-    if (obstacleGrid[0][0] == 1 || obstacleGrid[obstacleGrid.Length - 1][obstacleGrid[0].Length - 1] == 1) { return 0; }
+    var prev = new int[obstacleGrid[0].Length];
+    var cur = new int[obstacleGrid[0].Length];
 
-    int[][] array = Filling(obstacleGrid);
-
-    bool isClosed = true;
-
-    for (int i = 1; i < array.Length; i++)
+    if (obstacleGrid[0][0] == 1 || obstacleGrid[obstacleGrid.Length - 1][obstacleGrid[0].Length - 1] == 1)
     {
-        isClosed = true;
-        for (int j = 1; j < array[0].Length; j++)
+        return 0;
+    }
+
+    cur[0] = obstacleGrid[0][0] == 1 ? 0 : 1;
+
+    for (int j = 1; j < obstacleGrid[0].Length; j++)
+    {
+        cur[j] = obstacleGrid[0][j] == 1 || cur[j - 1] == 0 ? 0 : 1;
+    }
+    prev = cur;
+
+    for (int i = 1; i < obstacleGrid.Length; i++)
+    {
+        for (int j = 0; j < obstacleGrid[0].Length; j++)
         {
-            if (array[i][j] == -1) { continue; }
+            if (j == 0)
+            {
+                cur[j] = obstacleGrid[i][j] == 1 || prev[j] == 0 ? 0 : 1;
+            }
             else
             {
-                isClosed = false;
-                int a = array[i - 1][j] == -1 ? 0 : array[i - 1][j];
-                int b = array[i][j - 1] == -1 ? 0 : array[i][j - 1];
-
-                array[i][j] = a + b;
+                cur[j] = obstacleGrid[i][j] == 1 ? 0 : prev[j] + cur[j - 1];
             }
-
         }
-        if( isClosed) { break; }
+
+        prev = cur;
     }
 
-    //Print(array);
-
-    return array[array.Length - 1][array[0].Length - 1];
+    return cur[cur.Length - 1];
 }
 
 
 
-int[][] Filling(int[][] array)
-{
-    bool isBlock = false;
 
-    for (int i = 0; i < array[0].Length; i++)
-    {
-        if (!isBlock)
-        {
-            if (array[0][i] == 1)
-            {
-                array[0][i] = -1;
-                isBlock = true;
-            }
-            else { array[0][i] = 1; }
-        }
-        else
-        {
-            if (array[0][i] == 1) { array[0][i] = -1; }
-        }
-      
-    }
-    isBlock = false;
-
-    for (int i = 1; i < array.Length; i++)
-    {
-        if (!isBlock)
-        {
-            if (array[i][0] == 1)
-            {
-                array[i][0] = -1;
-                isBlock = true;
-            }
-            else { array[i][0] = 1; }
-        }
-        else
-        {
-            if (array[i][0] == 1) { array[i][0] = -1; }
-        }
-       
-    }
-
-
-    for (int i = 1; i < array.Length; i++)
-    {
-        for (int j = 1; j < array[0].Length; j++)
-        {
-            if (array[i][j] == 1)
-            {
-                array[i][j] = -1;
-            }
-        }
-    }
-    return array;
-}
-
-
-void Print(int [][] array)
-{
-    Console.WriteLine();
-    for (int i = 0; i < array.Length; i++)
-    {
-        for (int j = 0; j < array[0].Length; j++)
-        {
-            Console.Write("{0,-10} ", array[i][j]);
-        }
-        Console.WriteLine();
-    }
-}
 
 
 
