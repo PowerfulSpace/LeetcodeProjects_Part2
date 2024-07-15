@@ -14,10 +14,10 @@ int[][] array2 = new int[2][]
 
 int[][] array3 = new int[5][]
 {
-    new int[4] {0,0,0,0},
     new int[4] {0,1,0,0},
+    new int[4] {1,0,0,0},
     new int[4] {0,0,0,0},
-    new int[4] {0,0,1,0},
+    new int[4] {0,0,0,0},
     new int[4] {0,0,0,0}
 };
 
@@ -76,6 +76,19 @@ int[][] array6 = new int[5][]
     new int[5] {0,0,0,0,0}
 };
 
+int[][] array7 = new int[9][]
+{
+    new int[9] {0,0,0,0,0,1,0,0,0},
+    new int[9] {0,0,0,0,1,0,0,1,0},
+    new int[9] {0,1,0,0,0,0,0,0,0},
+    new int[9] {0,0,1,0,0,1,1,0,1},
+    new int[9] {1,0,0,1,0,1,0,0,0},
+    new int[9] {0,0,1,0,0,0,0,1,0},
+    new int[9] {0,0,0,0,0,1,0,0,1},
+    new int[9] {0,0,0,0,1,0,0,0,0},
+    new int[9] {0,0,0,1,0,0,0,0,0}
+};
+
 
 //Console.WriteLine(UniquePathsWithObstacles(array1));
 //Console.WriteLine(UniquePathsWithObstacles(array2));
@@ -83,6 +96,7 @@ int[][] array6 = new int[5][]
 //Console.WriteLine(UniquePathsWithObstacles(array4));
 Console.WriteLine(UniquePathsWithObstacles(array5));
 //Console.WriteLine(UniquePathsWithObstacles(array6));
+//Console.WriteLine(UniquePathsWithObstacles(array7));
 
 Console.ReadLine();
 
@@ -94,15 +108,17 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
 
     int[][] array = Filling(obstacleGrid);
 
-    if (array[array.Length - 1][array[0].Length - 1] == 0) { return 0; }
+    bool isClosed = true;
 
     for (int i = 1; i < array.Length; i++)
     {
+        isClosed = true;
         for (int j = 1; j < array[0].Length; j++)
         {
             if (array[i][j] == -1) { continue; }
             else
             {
+                isClosed = false;
                 int a = array[i - 1][j] == -1 ? 0 : array[i - 1][j];
                 int b = array[i][j - 1] == -1 ? 0 : array[i][j - 1];
 
@@ -110,7 +126,10 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
             }
 
         }
+        if (isClosed) { break; }
     }
+
+    //Print(array);
 
     return array[array.Length - 1][array[0].Length - 1];
 }
@@ -119,48 +138,53 @@ int UniquePathsWithObstacles(int[][] obstacleGrid)
 
 int[][] Filling(int[][] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    bool isBlock = false;
+
+    for (int i = 0; i < array[0].Length; i++)
     {
-        for (int x = i; x < array[0].Length; x++)
+        if (!isBlock)
         {
-
-            if (array[i][x] == 0)
+            if (array[0][i] == 1)
             {
-                array[i][x] = 1;
+                array[0][i] = -1;
+                isBlock = true;
             }
-            else
-            {
-                array[i][x] = -1;
-
-                for (int k = x + 1; k < array[0].Length; k++)
-                {
-                    array[i][k] = 0;
-                }
-                break;
-            }
+            else { array[0][i] = 1; }
+        }
+        else
+        {
+            if (array[0][i] == 1) { array[0][i] = -1; }
         }
 
-        if (i < array[0].Length)
+    }
+    isBlock = false;
+
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (!isBlock)
         {
-            for (int y = i + 1; y < array.Length; y++)
+            if (array[i][0] == 1)
             {
+                array[i][0] = -1;
+                isBlock = true;
+            }
+            else { array[i][0] = 1; }
+        }
+        else
+        {
+            if (array[i][0] == 1) { array[i][0] = -1; }
+        }
 
-                if (array[y][i] == 0)
-                {
-                    array[y][i] = 1;
-                }
-                else
-                {
-                    array[y][i] = -1;
+    }
 
-                    for (int k = y + 1; k < array.Length; k++)
-                    {
-                        array[k][i] = 0;
-                    }
 
-                    break;
-                }
-
+    for (int i = 1; i < array.Length; i++)
+    {
+        for (int j = 1; j < array[0].Length; j++)
+        {
+            if (array[i][j] == 1)
+            {
+                array[i][j] = -1;
             }
         }
     }
@@ -175,8 +199,13 @@ void Print(int[][] array)
     {
         for (int j = 0; j < array[0].Length; j++)
         {
-            Console.Write("{0,2} ", array[i][j]);
+            Console.Write("{0,-10} ", array[i][j]);
         }
         Console.WriteLine();
     }
 }
+
+
+
+
+
