@@ -151,9 +151,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_63_Unique Paths II"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_63_Unique Paths II_2", "project_63_Unique Paths II_2\project_63_Unique Paths II_2.csproj", "{8A2D329B-F5D6-4005-A189-4B0C0EB0C1C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_63_Unique Paths II_3", "project_63_Unique Paths II_3\project_63_Unique Paths II_3.csproj", "{28E5308E-7E5C-42DD-9D10-584BA4474273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_63_Unique Paths II_3", "project_63_Unique Paths II_3\project_63_Unique Paths II_3.csproj", "{28E5308E-7E5C-42DD-9D10-584BA4474273}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_64_Minimum Path Sum", "project_64_Minimum Path Sum\project_64_Minimum Path Sum.csproj", "{8B996C45-ED4A-4E06-9389-6B657689BBF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_64_Minimum Path Sum", "project_64_Minimum Path Sum\project_64_Minimum Path Sum.csproj", "{8B996C45-ED4A-4E06-9389-6B657689BBF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_64_Minimum Path Sum_2", "project_64_Minimum Path Sum_2\project_64_Minimum Path Sum_2.csproj", "{485819C8-7040-4310-B28D-1F404B120855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -465,6 +467,10 @@ Global
 		{8B996C45-ED4A-4E06-9389-6B657689BBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B996C45-ED4A-4E06-9389-6B657689BBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B996C45-ED4A-4E06-9389-6B657689BBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{485819C8-7040-4310-B28D-1F404B120855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485819C8-7040-4310-B28D-1F404B120855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485819C8-7040-4310-B28D-1F404B120855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485819C8-7040-4310-B28D-1F404B120855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
