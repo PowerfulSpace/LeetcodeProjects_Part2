@@ -12,10 +12,9 @@ int[][] grid2 = new int[2][]
     new int[3] {4,5,6}
 };
 
-int[][] grid3 = new int[2][]
+int[][] grid3 = new int[1][]
 {
-    new int[2] {1,2 },
-    new int[2] {1,1 }
+    new int[4] {9,1,4,8 }
 };
 
 Console.WriteLine(MinPathSum(grid1));
@@ -28,18 +27,17 @@ Console.ReadLine();
 
 int MinPathSum(int[][] grid)
 {
-    int[] array = { int.MaxValue };
+    int[] array = { int.MaxValue,0 };
     int result = GetPathSum(grid, 0, 0, 0, array);
     return array[0];
 }
 
 int GetPathSum(int[][] grid, int y, int x, int sum, int[] minSum)
 {
-    if (y > grid.Length || x > grid.Length) { return sum; }
+    if (y > grid.Length || x > grid[0].Length) { return sum; }
 
-    if (y == grid.Length - 1 && x == grid[0].Length - 1)
+    if (minSum[1] == (grid[0].Length + grid.Length) - 1)
     {
-        sum += grid[y][x];
         minSum[0] = Math.Min(sum, minSum[0]);
 
         return sum;
@@ -50,6 +48,7 @@ int GetPathSum(int[][] grid, int y, int x, int sum, int[] minSum)
         if (y < grid.Length)
         {
             sum += grid[y][i];
+            minSum[1] += 1;
             sum = GetPathSum(grid, y, i + 1, sum, minSum);
         }
 
@@ -58,10 +57,9 @@ int GetPathSum(int[][] grid, int y, int x, int sum, int[] minSum)
         if (y < grid.Length)
         {
             sum -= grid[y][i];
+            minSum[1] -= 1;
         }
     }
 
     return sum;
 }
-
-
