@@ -25,8 +25,8 @@ int[][] grid3 = new int[7][]
     new int[8] {4, 9, 9, 7, 9, 1, 9, 0 }
 };
 
-Console.WriteLine(MinPathSum(grid1));
-Console.WriteLine(MinPathSum(grid2));
+//Console.WriteLine(MinPathSum(grid1));
+//Console.WriteLine(MinPathSum(grid2));
 Console.WriteLine(MinPathSum(grid3));
 
 
@@ -39,7 +39,7 @@ int MinPathSum(int[][] grid)
 
     CalculateArray(grid, pathSum);
 
-    Print(pathSum);
+    //Print(pathSum);
 
     int y = grid.Length - 1;
     int x = grid[0].Length - 1;
