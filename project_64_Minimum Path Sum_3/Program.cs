@@ -96,7 +96,14 @@ void CalculateArray(int[][] grid, int[,] pathSum)
     {
         for (int y = 1; y < grid.Length; y++)
         {
-            pathSum[y, x] = grid[y][x] + pathSum[y - 1, x];
+            if (pathSum[y - 1, x] < pathSum[y, x - 1])
+            {
+                pathSum[y, x] = grid[y][x] + pathSum[y - 1, x];
+            }
+            else
+            {
+                pathSum[y, x] = grid[y][x] + pathSum[y, x - 1];
+            }
         }
     }
 }
