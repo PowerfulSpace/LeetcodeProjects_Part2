@@ -1,5 +1,4 @@
 ﻿
-using System.Text.RegularExpressions;
 
 string s1 = "0";
 string s2 = "e";
@@ -26,8 +25,6 @@ bool IsNumber(string s)
 
     return Parse(tokens);
 }
-
-
 
 List<Token> Tokenize(string s)
 {
@@ -68,22 +65,15 @@ List<Token> Tokenize(string s)
 
 
 
-enum Token
+
+bool isSign(char c)
 {
-    SIGN,
-    NUM,
-    DOT,
-    E,
-    ILLEGAL,
-    EOF
+    return c == '+' || c == '-';
 }
-
-
 bool isDigit(char c)
 {
     return 0x30 <= c && c <= 0x39;
 }
-
 bool isE(char c)
 {
     return c == 'e' || c == 'E';
@@ -93,6 +83,7 @@ bool isDot(char c)
 {
     return c == '.';
 }
+
 
 bool Parse(List<Token> tokens)
 {
@@ -154,7 +145,14 @@ bool Parse(List<Token> tokens)
 
     return seenNumBeforeE;
 }
-bool isSign(char c)
+
+
+enum Token
 {
-    return c == '+' || c == '-';
+    SIGN,
+    NUM,
+    DOT,
+    E,
+    ILLEGAL,
+    EOF
 }
