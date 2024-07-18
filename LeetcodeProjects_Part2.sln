@@ -163,6 +163,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_64_Minimum Path Sum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_65_Valid Number", "project_65_Valid Number\project_65_Valid Number.csproj", "{B29FF3E0-B5E1-49A8-9E63-1112235CCEEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_65_Valid Number_2", "project_65_Valid Number_2\project_65_Valid Number_2.csproj", "{86F27CCA-1162-4290-8A56-7AF7CF5EFA21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -489,6 +491,10 @@ Global
 		{B29FF3E0-B5E1-49A8-9E63-1112235CCEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B29FF3E0-B5E1-49A8-9E63-1112235CCEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B29FF3E0-B5E1-49A8-9E63-1112235CCEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F27CCA-1162-4290-8A56-7AF7CF5EFA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F27CCA-1162-4290-8A56-7AF7CF5EFA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F27CCA-1162-4290-8A56-7AF7CF5EFA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F27CCA-1162-4290-8A56-7AF7CF5EFA21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
