@@ -65,7 +65,7 @@ int MinPathSum(int[][] grid)
             break;
         }
 
-        if (pathSum[y - 1,x] < pathSum[y, x - 1])
+        if (pathSum[y - 1, x] < pathSum[y, x - 1])
         {
             sum += grid[y - 1][x];
             y--;
@@ -83,20 +83,20 @@ int MinPathSum(int[][] grid)
 void CalculateArray(int[][] grid, int[,] pathSum)
 {
     pathSum[0, 0] = grid[0][0];
-    for (int i = 1; i < grid[0].Length; i++)
+    for (int x = 1; x < grid[0].Length; x++)
     {
-        pathSum[0, i] = pathSum[0, i - 1] + grid[0][i];
+        pathSum[0, x] = pathSum[0, x - 1] + grid[0][x];
     }
-    for (int i = 1; i < grid.Length; i++)
+    for (int y = 1; y < grid.Length; y++)
     {
-        pathSum[i, 0] = pathSum[i - 1, 0] + grid[i][0];
+        pathSum[y, 0] = pathSum[y - 1, 0] + grid[y][0];
     }
 
-    for (int i = 1; i < grid.Length; i++)
+    for (int x = 1; x < grid[0].Length; x++)
     {
-        for (int j = 1; j < grid[i].Length; j++)
+        for (int y = 1; y < grid.Length; y++)
         {
-            pathSum[i, j] = grid[i][j] + pathSum[i - 1, j];
+            pathSum[y, x] = grid[y][x] + pathSum[y - 1, x];
         }
     }
 }
@@ -114,4 +114,3 @@ void Print(int[,] array)
         Console.WriteLine();
     }
 }
-
