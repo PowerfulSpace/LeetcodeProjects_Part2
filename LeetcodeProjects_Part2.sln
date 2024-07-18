@@ -159,15 +159,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_64_Minimum Path Sum
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_64_Minimum Path Sum_3", "project_64_Minimum Path Sum_3\project_64_Minimum Path Sum_3.csproj", "{5DB26E30-5ACF-40D6-9B7A-6D40FEC14F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_64_Minimum Path Sum_4", "project_64_Minimum Path Sum_4\project_64_Minimum Path Sum_4.csproj", "{E813385F-1D4F-4AE0-9873-1E559832FB87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_64_Minimum Path Sum_4", "project_64_Minimum Path Sum_4\project_64_Minimum Path Sum_4.csproj", "{E813385F-1D4F-4AE0-9873-1E559832FB87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_65_Valid Number", "project_65_Valid Number\project_65_Valid Number.csproj", "{B29FF3E0-B5E1-49A8-9E63-1112235CCEEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_65_Valid Number", "project_65_Valid Number\project_65_Valid Number.csproj", "{B29FF3E0-B5E1-49A8-9E63-1112235CCEEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_65_Valid Number_2", "project_65_Valid Number_2\project_65_Valid Number_2.csproj", "{86F27CCA-1162-4290-8A56-7AF7CF5EFA21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_65_Valid Number_2", "project_65_Valid Number_2\project_65_Valid Number_2.csproj", "{86F27CCA-1162-4290-8A56-7AF7CF5EFA21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_65_Valid Number_3", "project_65_Valid Number_3\project_65_Valid Number_3.csproj", "{67BC47EA-CB6B-465C-ABEB-C1961D532B25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_65_Valid Number_3", "project_65_Valid Number_3\project_65_Valid Number_3.csproj", "{67BC47EA-CB6B-465C-ABEB-C1961D532B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_66_Plus One", "project_66_Plus One\project_66_Plus One.csproj", "{621873CB-7270-419C-ADA8-7580F3EBFA5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_66_Plus One", "project_66_Plus One\project_66_Plus One.csproj", "{621873CB-7270-419C-ADA8-7580F3EBFA5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_66_Plus One_2", "project_66_Plus One_2\project_66_Plus One_2.csproj", "{FB0C524E-1CBF-4053-93A5-B62015EE8893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -507,6 +509,10 @@ Global
 		{621873CB-7270-419C-ADA8-7580F3EBFA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{621873CB-7270-419C-ADA8-7580F3EBFA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{621873CB-7270-419C-ADA8-7580F3EBFA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB0C524E-1CBF-4053-93A5-B62015EE8893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB0C524E-1CBF-4053-93A5-B62015EE8893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB0C524E-1CBF-4053-93A5-B62015EE8893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB0C524E-1CBF-4053-93A5-B62015EE8893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
