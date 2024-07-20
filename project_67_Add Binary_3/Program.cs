@@ -23,9 +23,6 @@ Console.WriteLine(AddBinary(a4, b4));
 Console.ReadLine();
 
 
-
-//возводить в степень каждый раз когда попадается еденица, на индекс
-
 string AddBinary(string a, string b)
 {
     int i = a.Length - 1;
