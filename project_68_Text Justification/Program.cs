@@ -43,6 +43,8 @@ IList<string> FullJustify(string[] words, int maxWidth)
     }
     if (row.Length > 0)
     {
+        LineaAlignment(row, maxWidth, count);
+
         result.Add(row.ToString());
         row.Clear();
     }
@@ -53,8 +55,28 @@ IList<string> FullJustify(string[] words, int maxWidth)
 
 void LineaAlignment(StringBuilder row, int maxWidth, int elementsCount)
 {
-    int lengthSpace = maxWidth - row.Length;
-    int countSpace = lengthSpace / (elementsCount - 1);
+    if (row[row.Length - 1] == ' ')
+    {
+        row.Length--;
+    }
+
+    int needToAddSpace = maxWidth - row.Length;
+
+    if (elementsCount <= 2)
+    {
+        while (row.Length < maxWidth)
+        {
+            row.Append(" ");
+        }
+        return;
+    }
+
+    int countSpace = needToAddSpace / (elementsCount - 1);
+
+    if (needToAddSpace < elementsCount)
+    {
+        countSpace = 1;
+    }
 
     for (int i = 0; i < maxWidth; i++)
     {
@@ -62,8 +84,9 @@ void LineaAlignment(StringBuilder row, int maxWidth, int elementsCount)
         {
             row.Insert(i, " ", countSpace);
             i += countSpace;
-            lengthSpace -= countSpace;
+            needToAddSpace -= countSpace;
         }
+        if (row.Length == maxWidth) { break; }
     }
-    Console.WriteLine();
 }
+
