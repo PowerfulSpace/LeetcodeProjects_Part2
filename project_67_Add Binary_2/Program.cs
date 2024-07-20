@@ -1,7 +1,5 @@
 ﻿
 
-
-
 string a1 = "11";
 string b1 = "1";
 
@@ -11,9 +9,14 @@ string b2 = "1011";
 string a3 = "0";
 string b3 = "0";
 
-Console.WriteLine(AddBinary(a1, b1));
-Console.WriteLine(AddBinary(a2, b2));
-Console.WriteLine(AddBinary(a3, b3));
+string a4 = "10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101";
+string b4 = "110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011";
+
+
+//Console.WriteLine(AddBinary(a1, b1));
+//Console.WriteLine(AddBinary(a2, b2));
+//Console.WriteLine(AddBinary(a3, b3));
+Console.WriteLine(AddBinary(a4, b4));
 
 Console.ReadLine();
 
@@ -23,24 +26,15 @@ Console.ReadLine();
 
 string AddBinary(string a, string b)
 {
-    Dictionary<int, int> binary = new Dictionary<int, int>()
-    {
-        [0] = 1,
-        [1] = 2,
-        [2] = 4,
-        [3] = 8,
-        [4] = 16,
-        [5] = 32,
-        [6] = 64,
-        [7] = 128
-    };
+    if (a[0] == '0' && b[0] == '0') { return "0"; }
 
     double sumA = GetSum(a);
     double sumB = GetSum(b);
-    double result = sumA + sumB;
+    double sum = sumA + sumB;
 
+    string result = DecimalToBinary((ulong)sum);
 
-    return "1";
+    return result;
 }
 
 
@@ -60,4 +54,17 @@ double GetSum(string s)
     }
 
     return sum;
+}
+
+
+string DecimalToBinary(ulong number)
+{
+    string binaryNumber = string.Empty;
+    while (number > 0)
+    {
+        binaryNumber = (number % 2) + binaryNumber;
+        number /= 2;
+    }
+
+    return binaryNumber;
 }
