@@ -19,7 +19,7 @@ Console.ReadLine();
 
 
 
-
+//возводить в степень каждый раз когда попадается еденица, на индекс
 
 string AddBinary(string a, string b)
 {
@@ -35,7 +35,29 @@ string AddBinary(string a, string b)
         [7] = 128
     };
 
+    double sumA = GetSum(a);
+    double sumB = GetSum(b);
+    double result = sumA + sumB;
 
 
     return "1";
+}
+
+
+double GetSum(string s)
+{
+    double sum = 0;
+    int indexBaniry = 0;
+
+    for (int i = s.Length - 1; i >= 0; i--)
+    {
+        if (s[i] == '1')
+        {
+            sum += indexBaniry == 0 ? 1 : Math.Pow(2, indexBaniry);
+        }
+
+        indexBaniry++;
+    }
+
+    return sum;
 }
