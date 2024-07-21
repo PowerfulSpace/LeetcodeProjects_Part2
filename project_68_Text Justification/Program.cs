@@ -62,7 +62,7 @@ void LineaAlignment(StringBuilder row, int maxWidth, int elementsCount)
 
     int needToAddSpace = maxWidth - row.Length;
 
-    if (elementsCount <= 2)
+    if (elementsCount == 1)
     {
         while (row.Length < maxWidth)
         {
