@@ -1,7 +1,5 @@
 ﻿
 
-using System.Text;
-
 string[] str1 = { "This", "is", "an", "example", "of", "text", "justification." };
 int maxWidth1 = 16;
 

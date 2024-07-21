@@ -183,6 +183,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_68_Text Justificati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_68_Text Justification_2", "project_68_Text Justification_2\project_68_Text Justification_2.csproj", "{B3866637-49F7-4188-997E-56227E7A31A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_68_Text Justification_3", "project_68_Text Justification_3\project_68_Text Justification_3.csproj", "{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -549,6 +551,10 @@ Global
 		{B3866637-49F7-4188-997E-56227E7A31A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3866637-49F7-4188-997E-56227E7A31A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3866637-49F7-4188-997E-56227E7A31A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
