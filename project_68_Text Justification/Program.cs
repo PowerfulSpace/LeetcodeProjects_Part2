@@ -5,8 +5,15 @@ using System.Text;
 string[] str1 = { "This", "is", "an", "example", "of", "text", "justification." };
 int maxWidth1 = 16;
 
+string[] str2 = { "The", "important", "thing", "is", "not", "to", "stop", "questioning.", "Curiosity", "has", "its", "own", "reason", "for", "existing." };
+int maxWidth2 = 17;
 
-FullJustify(str1, maxWidth1);
+string[] str3 = { "Here", "is", "an", "example", "of", "text", "justification." };
+int maxWidth3 = 15;
+
+//FullJustify(str1, maxWidth1);
+//FullJustify(str2, maxWidth2);
+FullJustify(str3, maxWidth3);
 
 Console.ReadLine();
 
@@ -32,7 +39,7 @@ IList<string> FullJustify(string[] words, int maxWidth)
         }
         else
         {
-            LineaAlignment(row, maxWidth, count);
+            LineaAlignment(row, maxWidth, count, false);
 
             result.Add(row.ToString());
             row.Clear();
@@ -41,9 +48,10 @@ IList<string> FullJustify(string[] words, int maxWidth)
             count = 1;
         }
     }
+
     if (row.Length > 0)
     {
-        LineaAlignment(row, maxWidth, count);
+        LineaAlignment(row, maxWidth, count, true);
 
         result.Add(row.ToString());
         row.Clear();
@@ -53,7 +61,7 @@ IList<string> FullJustify(string[] words, int maxWidth)
     return result;
 }
 
-void LineaAlignment(StringBuilder row, int maxWidth, int elementsCount)
+void LineaAlignment(StringBuilder row, int maxWidth, int elementsCount, bool lastLine)
 {
     if (row[row.Length - 1] == ' ')
     {
@@ -62,12 +70,10 @@ void LineaAlignment(StringBuilder row, int maxWidth, int elementsCount)
 
     int needToAddSpace = maxWidth - row.Length;
 
-    if (elementsCount == 1)
+    if (elementsCount == 1 || lastLine == true)
     {
-        while (row.Length < maxWidth)
-        {
-            row.Append(" ");
-        }
+        row.Append(new string(' ',needToAddSpace));
+
         return;
     }
 
@@ -78,15 +84,18 @@ void LineaAlignment(StringBuilder row, int maxWidth, int elementsCount)
         countSpace = 1;
     }
 
-    for (int i = 0; i < maxWidth; i++)
+    while (row.Length < maxWidth)
     {
-        if (row[i] == ' ')
+        for (int i = 0; i < maxWidth; i++)
         {
-            row.Insert(i, " ", countSpace);
-            i += countSpace;
-            needToAddSpace -= countSpace;
+            if (row.Length - 1 > i && row[i] == ' ')
+            {
+                row.Insert(i, " ", countSpace);
+                i += countSpace;
+                needToAddSpace -= countSpace;
+            }
+            if (row.Length >= maxWidth) { break; }
         }
-        if (row.Length == maxWidth) { break; }
+        countSpace = 1;
     }
 }
-
