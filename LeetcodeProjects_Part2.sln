@@ -185,6 +185,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_68_Text Justificati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_68_Text Justification_3", "project_68_Text Justification_3\project_68_Text Justification_3.csproj", "{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_69_Sqrt(x)", "project_69_Sqrt(x)\project_69_Sqrt(x).csproj", "{2A1A30A3-A722-4D7D-8105-6E723E513C41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -555,6 +557,10 @@ Global
 		{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F7017BB-A6C1-4B7A-A3B3-ECB5BB898D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A1A30A3-A722-4D7D-8105-6E723E513C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1A30A3-A722-4D7D-8105-6E723E513C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1A30A3-A722-4D7D-8105-6E723E513C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1A30A3-A722-4D7D-8105-6E723E513C41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
