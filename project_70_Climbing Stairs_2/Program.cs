@@ -11,9 +11,24 @@ Console.ReadLine();
 
 int ClimbStairs(int n)
 {
-
-
-    return n;
+        int first  = 1;     
+        int second = 2;     
+        int tmp = 0;        
+        
+        if(n<=2)
+        {
+            return n;
+        }
+        else
+        {
+            for(int i =3; i<=n;i++) 
+            {
+                tmp = second;       
+                second+=first;      
+                first = tmp;        
+            }
+        }
+        return second;
 }
 
 
