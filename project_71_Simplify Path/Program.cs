@@ -7,12 +7,18 @@ string path2 = "/home//foo/";
 string path3 = "/home/user/Documents/../Pictures";
 string path4 = "/../";
 string path5 = "/.../a/../b/c/../d/./";
+string path6 = "/a/./b/../../c/";
+string path7 = "/.../a/../b/c/../d/./";
+string path8 = "/../..ga/b/.f..d/..../e.baaeeh./.a";
 
-Console.WriteLine(SimplifyPath(path1));
-Console.WriteLine(SimplifyPath(path2));
-Console.WriteLine(SimplifyPath(path3));
-Console.WriteLine(SimplifyPath(path4));
-Console.WriteLine(SimplifyPath(path5));
+//Console.WriteLine(SimplifyPath(path1));
+//Console.WriteLine(SimplifyPath(path2));
+//Console.WriteLine(SimplifyPath(path3));
+//Console.WriteLine(SimplifyPath(path4));
+//Console.WriteLine(SimplifyPath(path5));
+//Console.WriteLine(SimplifyPath(path6));
+//Console.WriteLine(SimplifyPath(path7));
+Console.WriteLine(SimplifyPath(path8));
 
 
 Console.ReadLine();
@@ -20,40 +26,33 @@ Console.ReadLine();
 
 string SimplifyPath(string path)
 {
-    string patter = @"/(\w+|\.{3}|\.{2})";
+    string patter = @"/((\.{1,10})?(\w+)(\.{1,10})?(\w+)?)(\.{1,10})?|/(\.{1,10})";
     Regex regex = new Regex(patter);
     var collection = regex.Matches(path);
 
-    StringBuilder sb = new StringBuilder();
-    Queue<Match> q = new Queue<Match>();
-
+    List<Match> list = new List<Match>();
 
     foreach (Match match in collection)
     {
-        q.Enqueue(match);
-
-        if (match.Value == "..")
+        if(match.Value == "/.") { continue; }
+        if (match.Value == "/..")
         {
-            while (q.Count > 2)
+            if(list.Count > 0)
             {
-                sb.Append(q.Dequeue());
-            }
-            while (q.Count > 0)
-            {
-                q.Dequeue();
+                list.RemoveAt(list.Count - 1);
             }
         }
-
-        
-    }
-
-    if(q.Count > 0)
-    {
-        while (q.Count > 2)
+        else
         {
-            sb.Append(q.Dequeue());
+            list.Add(match);
         }
+
+
     }
 
-    return sb.ToString();
+    string result = string.Concat(list);
+
+    if(result == "") { result = "/"; }
+
+    return result;
 }
