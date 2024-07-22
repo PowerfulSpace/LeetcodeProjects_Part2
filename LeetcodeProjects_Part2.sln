@@ -191,7 +191,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_69_Sqrt(x)_2", "pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_70_Climbing Stairs", "project_70_Climbing Stairs\project_70_Climbing Stairs.csproj", "{DE2A72B1-5295-45BA-97AD-157F651DE973}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_70_Climbing Stairs_2", "project_70_Climbing Stairs_2\project_70_Climbing Stairs_2.csproj", "{AA2E6EA8-009E-40F2-AF7D-75AC4F00CB09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_70_Climbing Stairs_2", "project_70_Climbing Stairs_2\project_70_Climbing Stairs_2.csproj", "{AA2E6EA8-009E-40F2-AF7D-75AC4F00CB09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_70_Climbing Stairs_3", "project_70_Climbing Stairs_3\project_70_Climbing Stairs_3.csproj", "{A01963E3-034A-4848-B4C8-F0FA9A086A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -579,6 +581,10 @@ Global
 		{AA2E6EA8-009E-40F2-AF7D-75AC4F00CB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA2E6EA8-009E-40F2-AF7D-75AC4F00CB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA2E6EA8-009E-40F2-AF7D-75AC4F00CB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01963E3-034A-4848-B4C8-F0FA9A086A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01963E3-034A-4848-B4C8-F0FA9A086A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01963E3-034A-4848-B4C8-F0FA9A086A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01963E3-034A-4848-B4C8-F0FA9A086A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
