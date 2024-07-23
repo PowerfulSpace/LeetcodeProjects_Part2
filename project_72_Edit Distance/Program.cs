@@ -10,14 +10,10 @@ Console.WriteLine(MinDistance(word1, word2));
 
 Console.ReadLine();
 
-//Использщовавать подхзод динамического программирования
 int MinDistance(string word1, string word2)
 {
     StringBuilder sb = new StringBuilder(word1);
     int count = 0;
-
-    
-
 
     return count;
 }
