@@ -207,6 +207,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_72_Edit Distance", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_72_Edit Distance_2", "project_72_Edit Distance_2\project_72_Edit Distance_2.csproj", "{F86833B3-E8D8-4EE2-B0E0-D798E0ABE4C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_72_Edit Distance_3", "project_72_Edit Distance_3\project_72_Edit Distance_3.csproj", "{EB7B6DC6-20EF-4AA6-BEE1-5C0A4397E166}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -621,6 +623,10 @@ Global
 		{F86833B3-E8D8-4EE2-B0E0-D798E0ABE4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F86833B3-E8D8-4EE2-B0E0-D798E0ABE4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F86833B3-E8D8-4EE2-B0E0-D798E0ABE4C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB7B6DC6-20EF-4AA6-BEE1-5C0A4397E166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB7B6DC6-20EF-4AA6-BEE1-5C0A4397E166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB7B6DC6-20EF-4AA6-BEE1-5C0A4397E166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB7B6DC6-20EF-4AA6-BEE1-5C0A4397E166}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
