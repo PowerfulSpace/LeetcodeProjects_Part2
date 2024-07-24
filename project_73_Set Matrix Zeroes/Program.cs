@@ -21,5 +21,4 @@ Console.ReadLine();
 
 void SetZeroes(int[][] matrix)
 {
-
 }
