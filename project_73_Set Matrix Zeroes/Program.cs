@@ -19,8 +19,6 @@ SetZeroes(array2);
 
 Console.ReadLine();
 
-
-
 void SetZeroes(int[][] matrix)
 {
 
