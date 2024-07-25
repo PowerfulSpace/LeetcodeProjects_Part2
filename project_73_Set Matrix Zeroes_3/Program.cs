@@ -21,10 +21,6 @@ Console.ReadLine();
 
 void SetZeroes(int[][] matrix)
 {
-
-
-
-
     HashSet<int> rows = new();
     HashSet<int> cols = new();
     for (int i = 0; i < matrix.Length; i++)
