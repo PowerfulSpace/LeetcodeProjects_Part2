@@ -10,34 +10,28 @@ Console.ReadLine();
 
 void SortColors(int[] nums)
 {
-    List<int> red = new List<int>();
-    List<int> white = new List<int>();
-    List<int> blue = new List<int>();
-   
+    Dictionary<int, int> colors = new Dictionary<int, int>()
+    {
+        [0] = 0,
+        [1] = 0,
+        [2] = 0,
+    };
 
     for (int i = 0; i < nums.Length; i++)
     {
-        switch (nums[i])
-        {
-            case 0:
-                red.Add(0);
-                break;
-            case 1:
-                white.Add(1);
-                break;
-            case 2:
-                blue.Add(2);
-                break;
-        }
+        colors[nums[i]]++;
     }
-    List<int> colors = new List<int>(red);
-    colors = colors.Concat(white).ToList();
-    colors = colors.Concat(blue).ToList();
+    int index = 0;
 
-
-    for (int i = 0; i < colors.Count; i++)
+    foreach (int key in colors.Keys)
     {
-        nums[i] = colors[i];
+        int count = colors[key];
+        while(count > 0)
+        {
+            nums[index] = key;
+            count--;
+            index++;
+        }
     }
 }
 
