@@ -30,7 +30,7 @@ void SetZeroes(int[][] matrix)
         {
             if (matrix[i][j] == 0)
             {
-                matrix[i][j] = -1;
+                matrix[i][j] = int.MaxValue - 5;
             }
         }
     }
@@ -41,7 +41,7 @@ void SetZeroes(int[][] matrix)
         {
             for (int row = 0; row < matrix.Length; row++)
             {
-                if (matrix[row][indexCol] == -1)
+                if (matrix[row][indexCol] == int.MaxValue - 5)
                 {
                     SettingTheLineToZero(matrix, indexCol, row, "row");
                 }
@@ -52,7 +52,7 @@ void SetZeroes(int[][] matrix)
         {
             for (int col = 0; col < matrix[0].Length; col++)
             {
-                if (matrix[indexRow][col] == -1)
+                if (matrix[indexRow][col] == int.MaxValue - 5)
                 {
                     SettingTheLineToZero(matrix, col, indexRow, "col");
                 }
@@ -66,7 +66,7 @@ void SetZeroes(int[][] matrix)
     {
         for (int j = 0; j < matrix[0].Length; j++)
         {
-            if (matrix[i][j] == -1)
+            if (matrix[i][j] == int.MaxValue - 5)
             {
                 matrix[i][j] = 0;
             }
@@ -81,7 +81,7 @@ void SettingTheLineToZero(int[][] matrix, int indexCol, int indexRow, string dir
     {
         for (int col = 0; col < matrix[0].Length; col++)
         {
-            if (matrix[indexRow][col] != -1)
+            if (matrix[indexRow][col] != int.MaxValue - 5)
             {
                 matrix[indexRow][col] = 0;
             }   
@@ -91,7 +91,7 @@ void SettingTheLineToZero(int[][] matrix, int indexCol, int indexRow, string dir
     {
         for (int row = 0; row < matrix.Length; row++)
         {
-            if (matrix[row][indexCol] != -1)
+            if (matrix[row][indexCol] != int.MaxValue - 5)
             {
                 matrix[row][indexCol] = 0;
             }
