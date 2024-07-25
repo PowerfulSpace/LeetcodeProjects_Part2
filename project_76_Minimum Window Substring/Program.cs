@@ -33,6 +33,7 @@ string MinWindow(string s, string t)
 
     while (index < s.Length)
     {
+        //Решить проблему с повторяющимися элементами
         if (demanding.ContainsKey(s[index]) && demanding[s[index]] == 0)
         {
             if(length == t.Length) { head = index;}
