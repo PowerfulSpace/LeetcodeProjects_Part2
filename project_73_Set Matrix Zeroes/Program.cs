@@ -33,6 +33,7 @@ void SetZeroes(int[][] matrix)
                 if (matrix[indexRow][col] == 0)
                 {
                     SettingTheLineToZero(matrix, col, indexRow, "col");
+                    break;
                 }
             }
         }
@@ -43,6 +44,7 @@ void SetZeroes(int[][] matrix)
                 if (matrix[row][indexCol] == 0)
                 {
                     SettingTheLineToZero(matrix, indexCol, row, "row");
+                    break;
                 }
             }
         }
