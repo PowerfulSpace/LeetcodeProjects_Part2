@@ -221,6 +221,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_74_Search a 2D Matr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_74_Search a 2D Matrix_2", "project_74_Search a 2D Matrix_2\project_74_Search a 2D Matrix_2.csproj", "{4C865AED-C078-48AA-A2FA-85A6D7EE4ABB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_75_Sort Colors", "project_75_Sort Colors\project_75_Sort Colors.csproj", "{2CEC8531-0406-4D8B-A32C-158D171DE005}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -663,6 +665,10 @@ Global
 		{4C865AED-C078-48AA-A2FA-85A6D7EE4ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C865AED-C078-48AA-A2FA-85A6D7EE4ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C865AED-C078-48AA-A2FA-85A6D7EE4ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEC8531-0406-4D8B-A32C-158D171DE005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEC8531-0406-4D8B-A32C-158D171DE005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEC8531-0406-4D8B-A32C-158D171DE005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEC8531-0406-4D8B-A32C-158D171DE005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
