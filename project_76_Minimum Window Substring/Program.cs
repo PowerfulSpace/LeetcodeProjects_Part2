@@ -6,8 +6,8 @@ string s2 = "a", t2 = "a";
 string s3 = "aa", t3 = "aa";
 
 
-//Console.WriteLine(MinWindow(s1, t1));
-//Console.WriteLine(MinWindow(s2, t2));
+Console.WriteLine(MinWindow(s1, t1));
+Console.WriteLine(MinWindow(s2, t2));
 Console.WriteLine(MinWindow(s3, t3));
 
 
@@ -33,12 +33,11 @@ string MinWindow(string s, string t)
 
     while (index < s.Length)
     {
-        //Решить проблему с повторяющимися элементами
-        if (demanding.ContainsKey(s[index]) && demanding[s[index]] == 0)
+        if (demanding.ContainsKey(s[index]) && demanding[s[index]] != 0)
         {
             if(length == t.Length) { head = index;}
 
-            demanding[s[index]]++;
+            demanding[s[index]]--;
             length--;
         }
 
@@ -74,11 +73,11 @@ void Rewrite(Dictionary<char, int> demanding, string t)
     {
         if (demanding.ContainsKey(t[i]))
         {
-            demanding[t[i]] = 0;
+            demanding[t[i]]++;
         }
         else
         {
-            demanding.Add(t[i], 0);
+            demanding.Add(t[i], 1);
         }
     }
 }
