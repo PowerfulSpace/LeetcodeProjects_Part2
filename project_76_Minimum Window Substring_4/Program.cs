@@ -2,11 +2,15 @@
 string s1 = "ADOBECODEBANC", t1 = "ABC";
 string s2 = "a", t2 = "a";
 string s3 = "aa", t3 = "aa";
+string s4 = "a", t4 = "b";
+string s5 = "cabwefgewcwaefgcf", t5 = "cae";
 
 
-Console.WriteLine(MinWindow(s1, t1));
-Console.WriteLine(MinWindow(s2, t2));
-Console.WriteLine(MinWindow(s3, t3));
+//Console.WriteLine(MinWindow(s1, t1));
+//Console.WriteLine(MinWindow(s2, t2));
+//Console.WriteLine(MinWindow(s3, t3));
+//Console.WriteLine(MinWindow(s4, t4));
+Console.WriteLine(MinWindow(s5, t5));
 
 
 Console.ReadLine();
@@ -14,52 +18,49 @@ Console.ReadLine();
 
 string MinWindow(string s, string t)
 {
+    if(s.Length < t.Length) { return ""; }
 
-    int[] res = new int[2];
-    int l = 0, r = 0, reslen = s.Length * 2, i, j;
-    Dictionary<char, int> dicts = new Dictionary<char, int>();
-    Dictionary<char, int> dictt = new Dictionary<char, int>();
-    int have = 0, need = 0;
+    int[] target = new int[128];
+    int[] window = new int[128];
 
-    foreach (char c in t)
+    for (int i = 0; i < t.Length; i++)
     {
-        if (!dictt.ContainsKey(c))
-        {
-            dictt.Add(c, 1);
-            need++;
-        }
-        else
-            dictt[c]++;
+        target[t[i]]++;
     }
+    int min = int.MaxValue;
+    int length = 0;
 
-    while (r < s.Length)
+    int index = 0;
+    int head = -1;
+
+    for (int i = 0; i < s.Length; i++)
     {
-        if (!dicts.ContainsKey(s[r]))
-            dicts.Add(s[r], 1);
-        else
-            dicts[s[r]]++;
+        window[s[i]]++;
 
-        if (dictt.ContainsKey(s[r]) && dictt[s[r]] == dicts[s[r]])
-            have++;
-
-        while (have == need)
+        if (target[s[i]] >= window[s[i]])
         {
-            if (reslen > r - l + 1)
+            length++;
+        }
+
+        while (length == t.Length)
+        {
+            if(min > (i + 1) - index)
             {
-                res[0] = l;
-                res[1] = r;
-                reslen = r - l + 1;
+                min = (i + 1) - index;
+                head = index;
             }
 
-            dicts[s[l]]--;
-            if (dictt.ContainsKey(s[l]) && dictt[s[l]] > dicts[s[l]])
-                have--;
-            l++;
+            window[s[index]]--;
+
+            if (target[s[index]] > window[s[index]])
+            {
+                length--;
+            }
+
+            index++;
         }
-        r++;
     }
-    if (reslen != 2 * s.Length)
-        return s.Substring(res[0], res[1] - res[0] + 1);
-    return "";
+
+    return head == - 1 ? "" : s.Substring(head, min);
 }
 
