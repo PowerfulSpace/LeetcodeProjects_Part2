@@ -6,10 +6,10 @@ string s4 = "a", t4 = "b";
 string s5 = "cabwefgewcwaefgcf", t5 = "cae";
 
 
-//Console.WriteLine(MinWindow(s1, t1));
-//Console.WriteLine(MinWindow(s2, t2));
-//Console.WriteLine(MinWindow(s3, t3));
-//Console.WriteLine(MinWindow(s4, t4));
+Console.WriteLine(MinWindow(s1, t1));
+Console.WriteLine(MinWindow(s2, t2));
+Console.WriteLine(MinWindow(s3, t3));
+Console.WriteLine(MinWindow(s4, t4));
 Console.WriteLine(MinWindow(s5, t5));
 
 
