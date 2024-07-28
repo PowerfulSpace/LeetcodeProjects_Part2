@@ -12,26 +12,26 @@ Console.ReadLine();
 IList<IList<int>> Combine(int n, int k)
 {
     List<IList<int>> result = new List<IList<int>>();
-
-    if (n == 1) { result.Add(new List<int>() { 1}); }
-
-    for (int i = 1; i < n; i++)
-    {
-        List<int> list = new List<int>();
-        list.Add(i);
-        int index = i;
-
-        while (index > n)
-        {
-            for (int j = 0; j < k; j++)
-            {
-                list.Add(index);
-            }
-
-            index++;
-            result.Add(list);
-        }
-       
-    }
+    List<int> list = new List<int>();
+    GetArraysRanges(1, n, k, list, result);
     return result;
+}
+
+void GetArraysRanges(int i, int n, int k, List<int> list, List<IList<int>> result)
+{
+    if (list.Count == k)
+    {
+        result.Add(new List<int>(list));
+        return;
+    }
+    if (i > n)
+    {
+        return;
+    }
+    for (int j = i; j <= n; ++j)
+    {
+        list.Add(j);
+        GetArraysRanges(j + 1,n,k,list,result);
+        list.RemoveAt(list.Count - 1);
+    }
 }
