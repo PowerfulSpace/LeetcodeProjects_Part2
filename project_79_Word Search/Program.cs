@@ -1,4 +1,5 @@
 ﻿
+
 char[][] board1 = new char[3][]
 {
     new char[4] { 'A', 'B', 'C', 'E' },
@@ -40,17 +41,31 @@ bool Exist(char[][] board, string word)
 {
     List<char> list = new List<char>();
     List<(int, int)> start = FindTheFirstLitter(board, word[0], list);
-    
-    if(start.Count > 0) { list.Add(word[0]); }
-    else { return false; }
+    bool[,] block = new bool[board.Length, board[0].Length];
+
+    //if (start.Count > 0)
+    //{
+    //    list.Add(word[0]);
+    //    block[start[0].Item1, start[0].Item2] = true;
+    //}
+    //else { return false; }
 
     bool result = false;
 
+    int index = 0;
     foreach((int, int) c in start)
     {
-        result = WordSerach(board, 1, c.Item1, c.Item2, list, word, result);
+        list.Add(word[index]);
+        block[start[index].Item1, start[index].Item2] = true;
+
+        result = WordSerach(board, 1, c.Item1, c.Item2, list, word, result, block);
 
         if(result == true) break;
+
+        list.RemoveAt(list.Count - 1);
+        block[start[index].Item1, start[index].Item2] = false;
+
+        index++;
     }
 
 
@@ -58,7 +73,7 @@ bool Exist(char[][] board, string word)
 }
 
 
-bool WordSerach(char[][] board,int index, int y, int x, List<char> litters, string word, bool result)
+bool WordSerach(char[][] board,int index, int y, int x, List<char> litters, string word, bool result, bool[,] block)
 {
     if(litters.Count == word.Length)
     {
@@ -67,45 +82,57 @@ bool WordSerach(char[][] board,int index, int y, int x, List<char> litters, stri
 
     if(x < 0 || x > board[0].Length - 1 || y < 0 || y > board.Length - 1) {  return false; }
 
-    if (x - 1 >= 0 && word[index] == board[y][x - 1])
+    if ((litters.Count == 1 ? block[y, x] == true : block[y, x] == false) && x - 1 >= 0 && word[index] == board[y][x - 1])
     {
         litters.Add(word[index]);
-        result = WordSerach(board, index + 1, y, x - 1, litters, word, result);
+        block[y,x] = true;
+        result = WordSerach(board, index + 1, y, x - 1, litters, word, result, block);
 
         if (result) { return result; }
 
+        block[y, x] = false;
         litters.RemoveAt(litters.Count - 1);
     }
-    if (y - 1 >= 0 && word[index] == board[y - 1][x])
+    if ((litters.Count == 1 ? block[y, x] == true : block[y, x] == false) && y - 1 >= 0 && word[index] == board[y - 1][x])
     {
         litters.Add(word[index]);
-        result = WordSerach(board, index + 1, y - 1, x, litters, word, result);
+        block[y, x] = true;
+
+        result = WordSerach(board, index + 1, y - 1, x, litters, word, result, block);
 
         if (result) { return result; }
 
+        block[y, x] = false;
         litters.RemoveAt(litters.Count - 1);
     }
-    if (x + 1 < board[0].Length && word[index] == board[y][x + 1])
+    if ((litters.Count == 1 ? block[y, x] == true : block[y, x] == false) && x + 1 < board[0].Length && word[index] == board[y][x + 1])
     {
         litters.Add(word[index]);
-        result = WordSerach(board, index + 1, y, x + 1, litters, word, result);
+        block[y, x] = true;
+
+        result = WordSerach(board, index + 1, y, x + 1, litters, word, result, block);
 
         if (result) { return result; }
 
+        block[y, x] = false;
         litters.RemoveAt(litters.Count - 1);
     }
-    if (y + 1 < board.Length && word[index] == board[y + 1][x])
+    if ((litters.Count == 1 ? block[y, x] == true : block[y, x] == false) && y + 1 < board.Length && word[index] == board[y + 1][x])
     {
         litters.Add(word[index]);
-        result = WordSerach(board, index + 1, y + 1, x, litters, word, result);
+        block[y, x] = true;
+
+        result = WordSerach(board, index + 1, y + 1, x, litters, word, result, block);
 
         if (result) { return result; }
 
+        block[y, x] = false;
         litters.RemoveAt(litters.Count - 1);
     }
-
     return result;
 }
+
+
 
 List<(int,int)> FindTheFirstLitter(char[][] board, char litter, List<char> result)
 {
