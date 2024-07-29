@@ -25,7 +25,7 @@ char[][] board3 = new char[3][]
 string word3 = "ABCB";
 
 
-Console.WriteLine(Exist(board1, word1));
+//Console.WriteLine(Exist(board1, word1));
 Console.WriteLine(Exist(board2, word2));
 Console.WriteLine(Exist(board3, word3));
 
@@ -43,19 +43,12 @@ bool Exist(char[][] board, string word)
     List<(int, int)> start = FindTheFirstLitter(board, word[0], list);
     bool[,] block = new bool[board.Length, board[0].Length];
 
-    //if (start.Count > 0)
-    //{
-    //    list.Add(word[0]);
-    //    block[start[0].Item1, start[0].Item2] = true;
-    //}
-    //else { return false; }
-
     bool result = false;
 
     int index = 0;
     foreach((int, int) c in start)
     {
-        list.Add(word[index]);
+        list.Add(word[0]);
         block[start[index].Item1, start[index].Item2] = true;
 
         result = WordSerach(board, 1, c.Item1, c.Item2, list, word, result, block);
