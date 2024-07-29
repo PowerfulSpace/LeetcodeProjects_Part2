@@ -32,7 +32,8 @@ Console.WriteLine(Exist(board3, word3));
 Console.ReadLine();
 
 
-
+//Ошибка алгоритма, в добавлении элемента с массива который уже используетися.
+//Добавить ограничения в ввиде массива с указателями
 
 
 bool Exist(char[][] board, string word)
