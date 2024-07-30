@@ -1,8 +1,5 @@
 ﻿
 
-using System.Collections;
-using System.Collections.Generic;
-
 char[][] board1 = new char[3][]
 {
     new char[4] { 'A', 'B', 'C', 'E' },

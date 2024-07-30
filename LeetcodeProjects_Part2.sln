@@ -251,9 +251,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_78_Subsets_4", "pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_79_Word Search", "project_79_Word Search\project_79_Word Search.csproj", "{D868239E-6228-45EE-8B5B-2FC5579D8A98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_79_Word Search_2", "project_79_Word Search_2\project_79_Word Search_2.csproj", "{5927B3D7-AEB1-4127-BCD5-2ED47F54BF23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_79_Word Search_2", "project_79_Word Search_2\project_79_Word Search_2.csproj", "{5927B3D7-AEB1-4127-BCD5-2ED47F54BF23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_79_Word Search_3", "project_79_Word Search_3\project_79_Word Search_3.csproj", "{C4F238AA-4799-4324-91B2-75FEE09FE5DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_79_Word Search_3", "project_79_Word Search_3\project_79_Word Search_3.csproj", "{C4F238AA-4799-4324-91B2-75FEE09FE5DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_80_Remove Duplicates from Sorted Array II", "project_80_Remove Duplicates from Sorted Array II\project_80_Remove Duplicates from Sorted Array II.csproj", "{A1814C4F-52EC-4D92-9F8C-AE3546D93837}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -765,6 +767,10 @@ Global
 		{C4F238AA-4799-4324-91B2-75FEE09FE5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4F238AA-4799-4324-91B2-75FEE09FE5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4F238AA-4799-4324-91B2-75FEE09FE5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1814C4F-52EC-4D92-9F8C-AE3546D93837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1814C4F-52EC-4D92-9F8C-AE3546D93837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1814C4F-52EC-4D92-9F8C-AE3546D93837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1814C4F-52EC-4D92-9F8C-AE3546D93837}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
