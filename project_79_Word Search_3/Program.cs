@@ -1,5 +1,8 @@
 ﻿
 
+using System.Collections;
+using System.Collections.Generic;
+
 char[][] board1 = new char[3][]
 {
     new char[4] { 'A', 'B', 'C', 'E' },
@@ -47,18 +50,30 @@ bool Exist(char[][] board, string word)
     // reverse word if last letter occurs less than first
     word = GetOptimizedWord(word, wordLetters);
 
+    //Initial occurrences of the first letter
+    List<(int, int)> firstLetters = FindTheFirstLetters(board, word[0]);
+
     // optimization end
     HashSet<(int row, int col)> visited = new HashSet<(int, int)>();
 
-    // run dfs 
-    for (int row = 0; row < board.Length; row++)
+
+
+    foreach ((int, int) letter in firstLetters)
     {
-        for (int col = 0; col < board[row].Length; col++)
-        {
-            if (WordSerach(board, visited, word, row, col, 0))
-                return true;
-        }
+        if (WordSerach(board, visited, word, letter.Item1, letter.Item2, 0))
+            return true;
     }
+
+
+    // run dfs 
+    //for (int row = 0; row < board.Length; row++)
+    //{
+    //    for (int col = 0; col < board[row].Length; col++)
+    //    {
+    //        if (WordSerach(board, visited, word, row, col, 0))
+    //            return true;
+    //    }
+    //}
     return false;
 }
 
@@ -159,5 +174,22 @@ bool WordSerach(char[][] board, HashSet<(int, int)> visited, string word, int ro
         WordSerach(board, visited, word, row, col - 1, i + 1)
     );
     visited.Remove((row, col));
+    return result;
+}
+
+List<(int, int)> FindTheFirstLetters(char[][] board, char litter)
+{
+    List<(int, int)> result = new List<(int, int)>();
+
+    for (int i = 0; i < board.Length; i++)
+    {
+        for (int j = 0; j < board[i].Length; j++)
+        {
+            if (board[i][j] == litter)
+            {
+                result.Add((i, j));
+            }
+        }
+    }
     return result;
 }
