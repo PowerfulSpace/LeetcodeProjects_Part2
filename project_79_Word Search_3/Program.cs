@@ -33,8 +33,6 @@ Console.WriteLine(Exist(board3, word3));
 Console.ReadLine();
 
 
-//Ошибка алгоритма, в добавлении элемента с массива который уже используетися.
-//Добавить ограничения в ввиде массива с указателями
 
 bool Exist(char[][] board, string word)
 {
@@ -57,7 +55,7 @@ bool Exist(char[][] board, string word)
     {
         for (int col = 0; col < board[row].Length; col++)
         {
-            if (DFS(board, visited, word, row, col, 0))
+            if (WordSerach(board, visited, word, row, col, 0))
                 return true;
         }
     }
@@ -139,7 +137,7 @@ Dictionary<char, int> GetBoardLetterCount(char[][] board)
 // dfs algo - call stack is at most the size of the word
 // we are calling 4 times, 4 ^ n where n is the length of the word
 
-bool DFS(char[][] board, HashSet<(int, int)> visited, string word, int row, int col, int i)
+bool WordSerach(char[][] board, HashSet<(int, int)> visited, string word, int row, int col, int i)
 {
     // base case, we matched all characters
     if (i == word.Length)
@@ -155,10 +153,10 @@ bool DFS(char[][] board, HashSet<(int, int)> visited, string word, int row, int 
 
     visited.Add((row, col));
     var result = (
-        DFS(board, visited, word, row + 1, col, i + 1) ||
-        DFS(board, visited, word, row - 1, col, i + 1) ||
-        DFS(board, visited, word, row, col + 1, i + 1) ||
-        DFS(board, visited, word, row, col - 1, i + 1)
+        WordSerach(board, visited, word, row + 1, col, i + 1) ||
+        WordSerach(board, visited, word, row - 1, col, i + 1) ||
+        WordSerach(board, visited, word, row, col + 1, i + 1) ||
+        WordSerach(board, visited, word, row, col - 1, i + 1)
     );
     visited.Remove((row, col));
     return result;
