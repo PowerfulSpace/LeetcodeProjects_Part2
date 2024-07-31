@@ -255,7 +255,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_79_Word Search_2", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_79_Word Search_3", "project_79_Word Search_3\project_79_Word Search_3.csproj", "{C4F238AA-4799-4324-91B2-75FEE09FE5DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_80_Remove Duplicates from Sorted Array II", "project_80_Remove Duplicates from Sorted Array II\project_80_Remove Duplicates from Sorted Array II.csproj", "{A1814C4F-52EC-4D92-9F8C-AE3546D93837}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_80_Remove Duplicates from Sorted Array II", "project_80_Remove Duplicates from Sorted Array II\project_80_Remove Duplicates from Sorted Array II.csproj", "{A1814C4F-52EC-4D92-9F8C-AE3546D93837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_80_Remove Duplicates from Sorted Array II_2", "project_80_Remove Duplicates from Sorted Array II_2\project_80_Remove Duplicates from Sorted Array II_2.csproj", "{105324AB-6BB8-41FC-AAD9-F00BF41AB884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_80_Remove Duplicates from Sorted Array II_3", "project_80_Remove Duplicates from Sorted Array II_3\project_80_Remove Duplicates from Sorted Array II_3.csproj", "{5E3C2BBB-AD64-470C-BDE5-9D804FFD8715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -771,6 +775,14 @@ Global
 		{A1814C4F-52EC-4D92-9F8C-AE3546D93837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1814C4F-52EC-4D92-9F8C-AE3546D93837}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1814C4F-52EC-4D92-9F8C-AE3546D93837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105324AB-6BB8-41FC-AAD9-F00BF41AB884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105324AB-6BB8-41FC-AAD9-F00BF41AB884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105324AB-6BB8-41FC-AAD9-F00BF41AB884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105324AB-6BB8-41FC-AAD9-F00BF41AB884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E3C2BBB-AD64-470C-BDE5-9D804FFD8715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E3C2BBB-AD64-470C-BDE5-9D804FFD8715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E3C2BBB-AD64-470C-BDE5-9D804FFD8715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E3C2BBB-AD64-470C-BDE5-9D804FFD8715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
