@@ -14,21 +14,21 @@ Console.ReadLine();
 
 int RemoveDuplicates(int[] nums)
 {
-    int i = 0;
+    int index = 0;
     foreach (var n in nums)
     {
-        if (i >= 2)
+        if (index >= 2)
         {
-            int afds = nums[i - 2];
+            int afds = nums[index - 2];
         }
         
 
-        if (i == 0 || i == 1 || nums[i - 2] != n)
+        if (index == 0 || index == 1 || nums[index - 2] != n)
         {
-            nums[i] = n;
-            i++;
+            nums[index] = n;
+            index++;
         }
     }
 
-    return i;
+    return index;
 }
