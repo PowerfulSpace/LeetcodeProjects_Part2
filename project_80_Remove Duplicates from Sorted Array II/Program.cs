@@ -15,30 +15,35 @@ int RemoveDuplicates(int[] nums)
 	Dictionary<int,int> dict = new Dictionary<int,int>();
 	int count = 0;
 
-	for (int i = 0; i < nums.Length; i++)
-	{
+    for (int i = 0; i < nums.Length; i++)
+    {
         if (dict.ContainsKey(nums[i]))
         {
             if (dict[nums[i]] < 2)
             {
                 dict[nums[i]]++;
-            }
-            else
-            {
-                if (i + 1 < nums.Length - count)
-                {
-                    nums[i] = nums[i + 1 + count];
-                    count++;
-                    i--;
-                }
+                count++;
             }
         }
         else
         {
             dict[nums[i]] = 1;
+            count++;
         }
     }
 
-    return 1;
+    int index = 0;
+    foreach (var key in dict.Keys)
+    {
+        int i = dict[key];
+        while (i > 0)
+        {
+            nums[index] = key;
+            i--;
+            index++;
+        }
+    }
+
+    return count;
 }
 
